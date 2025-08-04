@@ -1,6 +1,4 @@
-HTML
 <!DOCTYPE html>
-
 <html lang="he">
 <head>
 <meta charset="utf-8"/>
@@ -24,178 +22,6 @@ HTML
 --neon-orange: #ff6600;
 --glass-bg: rgba(255, 255, 255, 0.1);
 --glass-border: rgba(255, 255, 255, 0.2);
-}
-
-/* Footer */
-.footer {
-background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-padding: 60px 0 30px 0;
-margin-top: 80px;
-position: relative;
-overflow: hidden;
-border-top: 2px solid var(--academic-gradient);
-}
-
-.footer::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background:
-radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.1) 0%, transparent 50%),
-radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
-animation: footerShimmer 12s ease-in-out infinite alternate;
-}
-
-@keyframes footerShimmer {
-0% { opacity: 0.3; transform: scale(1); }
-100% { opacity: 0.6; transform: scale(1.02); }
-}
-
-.footer-content {
-text-align: center;
-position: relative;
-z-index: 2;
-max-width: 800px;
-margin: 0 auto;
-}
-
-.footer-logo {
-font-size: clamp(2rem, 4vw, 2.8rem);
-font-weight: 900;
-margin-bottom: 20px;
-background: var(--academic-gradient);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-shadow: 0 0 30px rgba(79, 172, 254, 0.3);
-}
-
-.footer-tagline {
-font-size: 1.1em;
-color: #e0e0e0;
-margin-bottom: 25px;
-opacity: 0.9;
-font-weight: 500;
-line-height: 1.4;
-}
-
-.footer-copyright {
-font-size: 0.95em;
-color: #b0b0b0;
-margin-bottom: 15px;
-opacity: 0.8;
-font-weight: 400;
-}
-
-.footer-established {
-font-size: 0.9em;
-color: var(--neon-green);
-font-weight: 600;
-opacity: 0.9;
-}
-
-.footer-divider {
-width: 60px;
-height: 3px;
-background: var(--success-gradient);
-margin: 20px auto;
-border-radius: 2px;
-}
-
-/* רספונסיבי ל-Footer */
-@media (max-width: 768px) {
-.footer {
-padding: 40px 0 20px 0;
-margin-top: 60px;
-}
-
-.footer-content {
-padding: 0 20px;
-}
-
-.footer-tagline {
-font-size: 1em;
-margin-bottom: 20px;
-}
-
-.footer-copyright {
-font-size: 0.9em;
-}
-
-.footer-established {
-font-size: 0.85em;
-}
-}
-
-/* אייקון WhatsApp צף */
-.whatsapp-float {
-position: fixed;
-width: 60px;
-height: 60px;
-bottom: 25px;
-left: 25px;
-background: #25d366;
-color: white;
-border-radius: 50%;
-text-align: center;
-font-size: 28px;
-box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-z-index: 1000;
-display: flex;
-align-items: center;
-justify-content: center;
-text-decoration: none;
-transition: all 0.3s ease;
-animation: whatsappPulse 2s ease-in-out infinite;
-}
-
-.whatsapp-float:hover {
-transform: scale(1.1);
-box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-background: #128c7e;
-}
-
-.whatsapp-float:active {
-transform: scale(0.95);
-}
-
-@keyframes whatsappPulse {
-0% {
-transform: scale(1);
-box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-}
-50% {
-transform: scale(1.05);
-box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
-}
-100% {
-transform: scale(1);
-box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-}
-}
-
-/* רספונסיבי לאייקון WhatsApp */
-@media (max-width: 768px) {
-.whatsapp-float {
-width: 55px;
-height: 55px;
-font-size: 24px;
-bottom: 20px;
-left: 20px;
-}
-}
-
-@media (max-width: 480px) {
-.whatsapp-float {
-width: 50px;
-height: 50px;
-font-size: 22px;
-bottom: 15px;
-left: 15px;
-}
 }
 
 * {
@@ -427,6 +253,86 @@ border-radius: 2px;
 animation: expandWidth 2s ease-out;
 }
 
+/* בעיות אקדמיות */
+.problems-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 20px;
+margin: 25px 0;
+max-width: 1200px;
+margin: 25px auto;
+}
+
+.problem-card {
+background: var(--glass-bg);
+backdrop-filter: blur(15px);
+padding: 25px 20px;
+border-radius: 15px;
+text-align: center;
+border: 1px solid rgba(255, 107, 107, 0.3);
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+min-height: 200px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.problem-card::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+background: var(--stress-gradient);
+border-radius: 50%;
+transition: all 0.5s ease;
+transform: translate(-50%, -50%);
+opacity: 0.1;
+}
+
+.problem-card:hover::before {
+width: 100%;
+height: 100%;
+}
+
+.problem-card:hover {
+transform: scale(1.05) rotateY(5deg);
+border-color: var(--neon-orange);
+box-shadow: 0 15px 35px rgba(255, 102, 0, 0.3);
+}
+
+.problem-icon {
+font-size: 2.5em;
+margin-bottom: 15px;
+animation: bounce 2s infinite;
+position: relative;
+z-index: 2;
+color: var(--neon-orange);
+}
+
+.problem-card h3 {
+color: var(--neon-orange);
+font-size: 1.1em;
+font-weight: 700;
+margin-bottom: 10px;
+position: relative;
+z-index: 2;
+}
+
+.problem-card p {
+opacity: 0.9;
+position: relative;
+z-index: 2;
+line-height: 1.4;
+font-size: 0.9em;
+text-align: center;
+}
+
 /* סקציית סטטיסטיקות מרשימות */
 .stats-section {
 background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -443,7 +349,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background:
+background: 
 radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.2) 0%, transparent 50%),
 radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
 animation: statsShimmer 8s ease-in-out infinite alternate;
@@ -542,7 +448,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background:
+background: 
 radial-gradient(circle at 30% 40%, rgba(57, 255, 20, 0.1) 0%, transparent 50%),
 radial-gradient(circle at 70% 60%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);
 animation: testimonialsShimmer 10s ease-in-out infinite alternate;
@@ -682,36 +588,6 @@ font-size: 0.9em;
 color: #e0e0e0;
 opacity: 0.8;
 font-weight: 500;
-}
-
-/* רספונסיבי למחלקת הלקוחות */
-@media (max-width: 768px) {
-.testimonials-section {
-padding: 60px 0;
-margin: 40px 0;
-}
-
-.testimonials-grid {
-grid-template-columns: 1fr;
-gap: 25px;
-padding: 0 20px;
-}
-
-.testimonial-card {
-padding: 25px 20px;
-}
-
-.testimonials-header h2 {
-margin-bottom: 30px;
-}
-
-.grade-badge {
-font-size: 1.8em;
-width: 55px;
-height: 55px;
-top: -12px;
-right: 15px;
-}
 }
 
 /* סקציית מי אנחנו */
@@ -881,136 +757,6 @@ font-size: 0.95em;
 color: #e0e0e0;
 opacity: 0.9;
 line-height: 1.4;
-}
-
-/* רספונסיבי לסקציית מי אנחנו */
-@media (max-width: 768px) {
-.about-card {
-padding: 40px 30px;
-}
-
-.about-values {
-grid-template-columns: 1fr;
-gap: 20px;
-}
-
-.value-item {
-padding: 25px 20px;
-}
-
-.about-main-text {
-font-size: 1.2em;
-}
-
-.about-secondary-text {
-font-size: 1.1em;
-}
-}
-@media (max-width: 1200px) {
-.stats-counter-grid {
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(2, 1fr);
-gap: 30px;
-}
-}
-
-@media (max-width: 768px) {
-.stats-section {
-padding: 60px 0;
-margin: 40px 0;
-}
-
-.stats-counter-grid {
-grid-template-columns: 1fr;
-gap: 25px;
-padding: 0 20px;
-}
-
-.stat-counter {
-padding: 30px 20px;
-}
-
-.stats-hero h2 {
-margin-bottom: 40px;
-}
-}
-.problems-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(2, 1fr);
-gap: 20px;
-margin: 25px 0;
-max-width: 1200px;
-margin: 25px auto;
-}
-
-.problem-card {
-background: var(--glass-bg);
-backdrop-filter: blur(15px);
-padding: 25px 20px;
-border-radius: 15px;
-text-align: center;
-border: 1px solid rgba(255, 107, 107, 0.3);
-transition: all 0.3s ease;
-position: relative;
-overflow: hidden;
-min-height: 200px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.problem-card::before {
-content: '';
-position: absolute;
-top: 50%;
-left: 50%;
-width: 0;
-height: 0;
-background: var(--stress-gradient);
-border-radius: 50%;
-transition: all 0.5s ease;
-transform: translate(-50%, -50%);
-opacity: 0.1;
-}
-
-.problem-card:hover::before {
-width: 100%;
-height: 100%;
-}
-
-.problem-card:hover {
-transform: scale(1.05) rotateY(5deg);
-border-color: var(--neon-orange);
-box-shadow: 0 15px 35px rgba(255, 102, 0, 0.3);
-}
-
-.problem-icon {
-font-size: 2.5em;
-margin-bottom: 15px;
-animation: bounce 2s infinite;
-position: relative;
-z-index: 2;
-color: var(--neon-orange);
-}
-
-.problem-card h3 {
-color: var(--neon-orange);
-font-size: 1.1em;
-font-weight: 700;
-margin-bottom: 10px;
-position: relative;
-z-index: 2;
-}
-
-.problem-card p {
-opacity: 0.9;
-position: relative;
-z-index: 2;
-line-height: 1.4;
-font-size: 0.9em;
-text-align: center;
 }
 
 /* שירותים עם היפוך קלפים */
@@ -1323,6 +1069,263 @@ color: #4facfe;
 transform: translateY(-5px) scale(1.05);
 }
 
+/* Footer */
+.footer {
+background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+padding: 60px 0 30px 0;
+margin-top: 80px;
+position: relative;
+overflow: hidden;
+border-top: 2px solid var(--academic-gradient);
+}
+
+.footer::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: 
+radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.1) 0%, transparent 50%),
+radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+animation: footerShimmer 12s ease-in-out infinite alternate;
+}
+
+@keyframes footerShimmer {
+0% { opacity: 0.3; transform: scale(1); }
+100% { opacity: 0.6; transform: scale(1.02); }
+}
+
+.footer-content {
+text-align: center;
+position: relative;
+z-index: 2;
+max-width: 800px;
+margin: 0 auto;
+}
+
+.footer-logo {
+font-size: clamp(2rem, 4vw, 2.8rem);
+font-weight: 900;
+margin-bottom: 20px;
+background: var(--academic-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-shadow: 0 0 30px rgba(79, 172, 254, 0.3);
+}
+
+.footer-tagline {
+font-size: 1.1em;
+color: #e0e0e0;
+margin-bottom: 25px;
+opacity: 0.9;
+font-weight: 500;
+line-height: 1.4;
+}
+
+.footer-copyright {
+font-size: 0.95em;
+color: #b0b0b0;
+margin-bottom: 15px;
+opacity: 0.8;
+font-weight: 400;
+}
+
+.footer-established {
+font-size: 0.9em;
+color: var(--neon-green);
+font-weight: 600;
+opacity: 0.9;
+}
+
+.footer-divider {
+width: 60px;
+height: 3px;
+background: var(--success-gradient);
+margin: 20px auto;
+border-radius: 2px;
+}
+
+/* כפתורי פעולה צפים */
+.whatsapp-float {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 25px;
+left: 25px;
+background: #25d366;
+color: white;
+border-radius: 50%;
+text-align: center;
+font-size: 28px;
+box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+transition: all 0.3s ease;
+animation: whatsappPulse 2s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+transform: scale(1.1);
+box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+background: #128c7e;
+}
+
+.whatsapp-float:active {
+transform: scale(0.95);
+}
+
+@keyframes whatsappPulse {
+0% {
+transform: scale(1);
+box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+50% {
+transform: scale(1.05);
+box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+100% {
+transform: scale(1);
+box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+}
+}
+
+.rocket-float {
+position: fixed;
+width: 60px;
+height: 60px;
+bottom: 100px;
+left: 25px;
+background: #7f5af0;
+color: white;
+border-radius: 50%;
+text-align: center;
+font-size: 28px;
+box-shadow: 0 4px 20px rgba(127, 90, 240, 0.4);
+z-index: 1001;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s ease;
+border: none;
+outline: none;
+}
+
+.rocket-float:hover {
+transform: scale(1.1);
+box-shadow: 0 6px 25px rgba(127, 90, 240, 0.6);
+background: #6a4de8;
+}
+
+.rocket-float:active {
+transform: scale(0.95);
+}
+
+.rocket-popup {
+position: fixed;
+bottom: 180px;
+left: 20px;
+background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+border: 2px solid #38bdf8;
+padding: 25px;
+border-radius: 20px;
+z-index: 1002;
+width: 320px;
+display: none;
+box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+backdrop-filter: blur(20px);
+}
+
+.rocket-popup h3 {
+color: #38bdf8;
+margin-bottom: 20px;
+text-align: center;
+font-size: 1.1em;
+font-weight: 700;
+}
+
+.rocket-popup input, 
+.rocket-popup select, 
+.rocket-popup textarea {
+width: 100%;
+margin-bottom: 15px;
+padding: 12px;
+border-radius: 10px;
+border: 1px solid #38bdf8;
+font-size: 0.9em;
+background: rgba(255, 255, 255, 0.1);
+color: #fff;
+font-family: 'Inter', sans-serif;
+transition: all 0.3s ease;
+}
+
+.rocket-popup input:focus,
+.rocket-popup select:focus,
+.rocket-popup textarea:focus {
+outline: none;
+border-color: #00d4ff;
+box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+background: rgba(255, 255, 255, 0.15);
+}
+
+.rocket-popup input::placeholder,
+.rocket-popup textarea::placeholder {
+color: rgba(255, 255, 255, 0.7);
+}
+
+.rocket-popup select option {
+background: #1a1a2e;
+color: #fff;
+}
+
+.rocket-actions {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 20px;
+}
+
+.rocket-actions button {
+padding: 10px 15px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 600;
+transition: all 0.3s ease;
+}
+
+#rocketClose {
+background: rgba(248, 113, 113, 0.2);
+color: #f87171;
+font-size: 1.1em;
+}
+
+#rocketClose:hover {
+background: rgba(248, 113, 113, 0.4);
+transform: scale(1.1);
+}
+
+.btn-whatsapp {
+background: #25d366;
+color: white;
+font-size: 0.9em;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.btn-whatsapp:hover {
+background: #128c7e;
+transform: scale(1.05);
+box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
 /* אנימציות */
 @keyframes slideDown {
 from { opacity: 0; transform: translateY(-30px); }
@@ -1365,15 +1368,6 @@ from { width: 0; }
 to { width: 80px; }
 }
 
-/* אפקטים מיוחדים לכפתורי קשר */
-.btn-primary:hover i {
-animation: whatsappBounce 0.6s ease-in-out;
-}
-
-.btn-secondary:hover i {
-animation: phonePulse 0.5s ease-in-out;
-}
-
 @keyframes whatsappBounce {
 0%, 100% { transform: scale(1) rotate(0deg); }
 25% { transform: scale(1.1) rotate(-5deg); }
@@ -1383,6 +1377,15 @@ animation: phonePulse 0.5s ease-in-out;
 @keyframes phonePulse {
 0%, 100% { transform: scale(1); }
 50% { transform: scale(1.2); }
+}
+
+/* אפקטים מיוחדים לכפתורי קשר */
+.btn-primary:hover i {
+animation: whatsappBounce 0.6s ease-in-out;
+}
+
+.btn-secondary:hover i {
+animation: phonePulse 0.5s ease-in-out;
 }
 
 /* רספונסיבי */
@@ -1397,6 +1400,12 @@ grid-template-columns: repeat(2, 1fr) !important;
 grid-template-rows: repeat(5, 1fr) !important;
 }
 .service-card { width: 320px; }
+
+.stats-counter-grid {
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+gap: 30px;
+}
 }
 
 @media (max-width: 900px) {
@@ -1415,36 +1424,268 @@ grid-template-rows: repeat(9, 1fr) !important;
 max-width: 400px !important;
 }
 .service-card { width: 100%; max-width: 400px; }
-.stress-stats { grid-template-columns: 1fr 1fr; gap: 20px; }
-.problems-grid {
-grid-template-columns: 1fr !important;
-grid-template-rows: repeat(6, 1fr) !important;
-gap: 15px;
+
+.stress-stats { 
+grid-template-columns: 1fr 1fr; 
+gap: 20px; 
 }
-.cta-buttons { flex-direction: column; align-items: center; }
+
+.problems-grid { 
+grid-template-columns: 1fr !important; 
+grid-template-rows: repeat(6, 1fr) !important;
+gap: 15px; 
+}
+
+.cta-buttons { 
+flex-direction: column; 
+align-items: center; 
+}
+
 .section-card, .cta {
 padding: 40px 30px;
 margin: 40px 0;
 }
+
+.stats-section {
+padding: 60px 0;
+margin: 40px 0;
+}
+
+.stats-counter-grid {
+grid-template-columns: 1fr;
+gap: 25px;
+padding: 0 20px;
+}
+
+.stat-counter {
+padding: 30px 20px;
+}
+
+.stats-hero h2 {
+margin-bottom: 40px;
+}
+
+.testimonials-section {
+padding: 60px 0;
+margin: 40px 0;
+}
+
+.testimonials-grid {
+grid-template-columns: 1fr;
+gap: 25px;
+padding: 0 20px;
+}
+
+.testimonial-card {
+padding: 25px 20px;
+}
+
+.testimonials-header h2 {
+margin-bottom: 30px;
+}
+
+.grade-badge {
+font-size: 1.8em;
+width: 55px;
+height: 55px;
+top: -12px;
+right: 15px;
+}
+
+.about-card {
+padding: 40px 30px;
+}
+
+.about-values {
+grid-template-columns: 1fr;
+gap: 20px;
+}
+
+.value-item {
+padding: 25px 20px;
+}
+
+.about-main-text {
+font-size: 1.2em;
+}
+
+.about-secondary-text {
+font-size: 1.1em;
+}
+
+.footer {
+padding: 40px 0 20px 0;
+margin-top: 60px;
+}
+
+.footer-content {
+padding: 0 20px;
+}
+
+.footer-tagline {
+font-size: 1em;
+margin-bottom: 20px;
+}
+
+.footer-copyright {
+font-size: 0.9em;
+}
+
+.footer-established {
+font-size: 0.85em;
+}
+
+.whatsapp-float {
+width: 55px;
+height: 55px;
+font-size: 24px;
+bottom: 20px;
+left: 20px;
+}
+
+.rocket-float {
+width: 55px;
+height: 55px;
+font-size: 24px;
+bottom: 90px;
+left: 20px;
+}
 }
 
 @media (max-width: 480px) {
-.hero h1 { font-size: 2.5rem; }
-.stress-stats { grid-template-columns: 1fr; }
-.btn { padding: 15px 25px; font-size: 1rem; }
-.problems-grid {
-grid-template-columns: 1fr !important;
+.hero h1 { 
+font-size: 2.5rem; 
+}
+
+.stress-stats { 
+grid-template-columns: 1fr; 
+}
+
+.btn { 
+padding: 15px 25px; 
+font-size: 1rem; 
+}
+
+.problems-grid { 
+grid-template-columns: 1fr !important; 
 grid-template-rows: repeat(6, 1fr) !important;
-gap: 12px;
+gap: 12px; 
+}
+
+.whatsapp-float {
+width: 50px;
+height: 50px;
+font-size: 22px;
+bottom: 15px;
+left: 15px;
+}
+
+.rocket-float {
+width: 50px;
+height: 50px;
+font-size: 22px;
+bottom: 80px;
+left: 15px;
 }
 }
 </style>
 </head>
 <body>
 <div class="academic-bg"></div>
-<a class="whatsapp-float" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת לקבל עזרה אקדמית" target="_blank" title="צור קשר בWhatsApp">
+
+<!-- כפתורי פעולה צפים -->
+<button class="rocket-float" style="position: fixed; width: 60px; height: 60px; bottom: 100px; left: 25px; background: #7f5af0; color: white; border-radius: 50%; border: none; cursor: pointer; z-index: 9999; font-size: 24px;" onclick="document.getElementById('rocketPopup').style.display = document.getElementById('rocketPopup').style.display === 'block' ? 'none' : 'block';">
+🎓
+</button>
+
+<div class="rocket-popup" id="rocketPopup" style="position: fixed; bottom: 180px; left: 20px; background: #1a1a2e; border: 2px solid #38bdf8; padding: 25px; border-radius: 20px; z-index: 9998; width: 320px; display: none; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+<form id="quickOrderForm" onsubmit="handleFormSubmit(event)">
+<h3 style="color: #38bdf8; margin-bottom: 20px; text-align: center;">🚀 הזמנה מהירה</h3>
+<input id="customerName" placeholder="שם מלא" required type="text" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
+<select id="serviceType" required style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;">
+<option value="">סוג שירות</option>
+<option value="כתיבה אקדמית">כתיבה אקדמית</option>
+<option value="ניתוח סטטיסטי">ניתוח סטטיסטי</option>
+<option value="מצגות">מצגות</option>
+<option value="תמלול וסיכום">תמלול וסיכום</option>
+<option value="קורות חיים">קורות חיים</option>
+<option value="סיוע במבחנים">סיוע במבחנים</option>
+<option value="חיפוש מידע">חיפוש מידע אקדמי</option>
+<option value="פודקאסט לימודי">פודקאסט לימודי</option>
+<option value="תרגום">תרגום</option>
+<option value="אחר">אחר</option>
+</select>
+<select id="urgencyLevel" required style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;">
+<option value="">רמת דחיפות</option>
+<option value="רגילה (7-10 ימים)">רגילה (7-10 ימים)</option>
+<option value="מהירה (3-5 ימים)">מהירה (3-5 ימים)</option>
+<option value="דחופה (24-48 שעות)">דחופה (24-48 שעות)</option>
+<option value="קריטית (כמה שעות)">קריטית (כמה שעות)</option>
+</select>
+<input id="customerPhone" placeholder="050-1234567" required type="tel" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
+<textarea id="projectDescription" placeholder="תיאור קצר של הפרויקט והדרישות" rows="3" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff; resize: vertical;"></textarea>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<button type="button" onclick="document.getElementById('rocketPopup').style.display = 'none'" style="background: rgba(248, 113, 113, 0.2); color: #f87171; border: none; padding: 10px; border-radius: 8px; cursor: pointer;">❌</button>
+<button type="submit" style="background: #25d366; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">שלח הזמנה 📤</button>
+</div>
+</form>
+</div>
+
+<script>
+function handleFormSubmit(event) {
+event.preventDefault();
+console.log('Form submitted');
+
+// Get form data
+const customerName = document.getElementById('customerName').value.trim();
+const serviceType = document.getElementById('serviceType').value;
+const urgencyLevel = document.getElementById('urgencyLevel').value;
+const customerPhone = document.getElementById('customerPhone').value.trim();
+const projectDescription = document.getElementById('projectDescription').value.trim();
+
+// Validate required fields
+if (!customerName || !serviceType || !urgencyLevel || !customerPhone || !projectDescription) {
+alert('אנא מלא את כל השדות הנדרשים');
+return;
+}
+
+// Create WhatsApp message
+const message = `🎓 *הזמנה חדשה - מ.א עזרה אקדמית*
+
+👤 *שם הלקוח:* ${customerName}
+📱 *טלפון:* ${customerPhone}
+🛠️ *סוג שירות:* ${serviceType}
+⏰ *רמת דחיפות:* ${urgencyLevel}
+
+📝 *תיאור הפרויקט:*
+${projectDescription}
+
+---
+⚡ הזמנה נשלחה דרך הזמנה מהירה באתר`;
+
+// Encode message for WhatsApp
+const encodedMessage = encodeURIComponent(message);
+const whatsappURL = `https://wa.me/972532829226?text=${encodedMessage}`;
+
+// Open WhatsApp
+window.open(whatsappURL, '_blank');
+
+// Close popup and reset form
+document.getElementById('rocketPopup').style.display = 'none';
+document.getElementById('quickOrderForm').reset();
+
+// Show success message
+const successMsg = document.createElement('div');
+successMsg.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-align: center; font-weight: 600;">✅ ההזמנה נשלחה בהצלחה!<br>תועברו לווטסאפ כדי לשלוח את הפרטים</div>`;
+document.body.appendChild(successMsg);
+setTimeout(() => document.body.removeChild(successMsg), 3000);
+}
+</script>
+
+<a class="whatsapp-float" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת בעזרה אקדמית" target="_blank" title="צור קשר בWhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
+
 <header>
 <div class="container">
 <div class="hero">
@@ -1478,6 +1719,7 @@ gap: 12px;
 </div>
 </div>
 </header>
+
 <div class="container">
 <section class="section">
 <div class="section-card">
@@ -1532,6 +1774,7 @@ gap: 12px;
 </div>
 </div>
 </section>
+
 <section class="stats-section">
 <div class="container">
 <div class="stats-hero">
@@ -1557,6 +1800,7 @@ gap: 12px;
 </div>
 </div>
 </section>
+
 <section class="testimonials-section">
 <div class="container">
 <div class="testimonials-header">
@@ -1627,6 +1871,7 @@ gap: 12px;
 </div>
 </div>
 </section>
+
 <section class="about-section">
 <div class="container">
 <div class="about-card">
@@ -1636,13 +1881,13 @@ gap: 12px;
 </div>
 <div class="about-content">
 <p class="about-main-text">
-<span class="highlight-text">מ.א עזרה אקדמית</span> - הקמה מתוך הבנה עמוקה של האתגרים העומדים בפני סטודנטים בישראל.
-אנו צוות של בוגרי תארים מתקדמים, כל אחד מומחה בתחומו, שמאמינים כי
+<span class="highlight-text">מ.א עזרה אקדמית</span> - הקמה מתוך הבנה עמוקה של האתגרים העומדים בפני סטודנטים בישראל. 
+אנו צוות של בוגרי תארים מתקדמים, כל אחד מומחה בתחומו, שמאמינים כי 
 לכל סטודנט מגיעה ההזדמנות שווה להצליח.
 </p>
 <p class="about-secondary-text">
-המטרה שלנו היא לא רק לספק עזרה נקודתית, אלא להעניק לכם כלים, ביטחון ושקט נפשי
-כדי שתוכלו להתמקד במה שחשוב באמת. אנו מחויבים לאתיקה מקצועית, דיסקרטיות מוחלטת,
+המטרה שלנו היא לא רק לספק עזרה נקודתית, אלא להעניק לכם כלים, ביטחון ושקט נפשי 
+כדי שתוכלו להתמקד במה שחשוב באמת. אנו מחויבים לאתיקה מקצועית, דיסקרטיות מוחלטת, 
 שמירה על סודיות הלקוח ושירות איכותי ונגיש.
 </p>
 <div class="about-values">
@@ -1672,6 +1917,7 @@ gap: 12px;
 </div>
 </div>
 </section>
+
 <section class="section">
 <div class="section-card">
 <h2><i class="fas fa-lightbulb"></i> השירותים שלנו</h2>
@@ -1710,6 +1956,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="statistics">
 <div class="service-front">
 <div class="service-icon">
@@ -1741,6 +1988,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="presentations">
 <div class="service-front">
 <div class="service-icon">
@@ -1771,6 +2019,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="transcription">
 <div class="service-front">
 <div class="service-icon">
@@ -1800,6 +2049,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="editing">
 <div class="service-front">
 <div class="service-icon">
@@ -1826,11 +2076,12 @@ gap: 12px;
 <div class="back-content">
 <div class="price-item">🇮🇱 עברית בלבד: 350 ₪</div>
 <div class="price-item">🇺🇸 אנגלית בלבד: 450 ₪</div>
-<div class="price-item">🌐 דו לשוני: 600 ₪</div>
+<div class="price-item">🌐 דו‑לשוני: 600 ₪</div>
 <div class="price-item">🔄 שדרוג קיים: 200 ₪</div>
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="tutoring">
 <div class="service-front">
 <div class="service-icon">
@@ -1860,6 +2111,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="research">
 <div class="service-front">
 <div class="service-icon">
@@ -1890,6 +2142,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="consulting">
 <div class="service-front">
 <div class="service-icon">
@@ -1920,6 +2173,7 @@ gap: 12px;
 </div>
 </div>
 </div>
+
 <div class="service-card" data-card="translation">
 <div class="service-front">
 <div class="service-icon">
@@ -1952,6 +2206,7 @@ gap: 12px;
 </div>
 </div>
 </section>
+
 <section class="cta">
 <div class="cta-content">
 <div class="cta-urgency">
@@ -1977,53 +2232,21 @@ gap: 12px;
 </div>
 </section>
 </div>
+
+<!-- Footer -->
 <footer class="footer">
 <div class="container">
 <div class="footer-content">
 <div class="footer-logo">מ.א עזרה אקדמית</div>
 <div class="footer-divider"></div>
+<div class="footer-tagline">השותפים שלכם להצלחה באקדמיה</div>
 <div class="footer-copyright">© 2025 מ.א עזרה אקדמית. כל הזכויות שמורות.</div>
 <div class="footer-established">שירות מקצועי ואמין לסטודנטים מאז 2018</div>
 </div>
 </div>
 </footer>
+
 <script>
-// Function to check number of cards
-function checkCards() {
-const cards = document.querySelectorAll('.service-card');
-console.log(`Found cards: ${cards.length}`);
-cards.forEach((card, index) => {
-const title = card.querySelector('h3')?.textContent?.substring(0, 30) + '...';
-console.log(`Card ${index + 1}: ${title}`);
-});
-const gridChildren = document.querySelector('.services-grid')?.children.length || 0;
-console.log(`Services grid children count: ${gridChildren}`);
-return cards.length;
-}
-
-// Check cards multiple times
-let attempts = 0;
-const maxAttempts = 10;
-function attemptCheck() {
-attempts++;
-const cardCount = checkCards();
-console.log(`Attempt ${attempts} - Found cards: ${cardCount}`);
-if (attempts < maxAttempts) {
-setTimeout(attemptCheck, 100);
-} else {
-console.log('=== DEBUG INFO ===');
-console.log(`Total cards found: ${cardCount}`);
-checkCards();
-}
-}
-
-// Start checking when DOM is loaded
-if (document.readyState === 'loading') {
-document.addEventListener('DOMContentLoaded', attemptCheck);
-} else {
-attemptCheck();
-}
-
 // Service card flip functionality
 document.addEventListener('DOMContentLoaded', function() {
 const serviceCards = document.querySelectorAll('.service-card');
@@ -2083,6 +2306,132 @@ element.classList.remove('counting');
 }
 requestAnimationFrame(updateCounter);
 }
+
+// Rocket popup functionality with better error handling
+document.addEventListener('DOMContentLoaded', function() {
+const rocketBtn = document.getElementById("rocketBtn");
+const rocketPopup = document.getElementById("rocketPopup");
+const rocketClose = document.getElementById("rocketClose");
+const quickOrderForm = document.getElementById("quickOrderForm");
+
+console.log('Rocket elements:', { rocketBtn, rocketPopup, rocketClose, quickOrderForm });
+
+if (rocketBtn && rocketPopup && rocketClose && quickOrderForm) {
+// Show/hide popup
+rocketBtn.addEventListener("click", (e) => {
+e.stopPropagation();
+console.log('Rocket button clicked');
+const isVisible = rocketPopup.style.display === "block";
+rocketPopup.style.display = isVisible ? "none" : "block";
+});
+
+// Close popup
+rocketClose.addEventListener("click", (e) => {
+e.stopPropagation();
+console.log('Close button clicked');
+rocketPopup.style.display = "none";
+});
+
+// Close popup when clicking outside
+document.addEventListener("click", (e) => {
+if (!rocketPopup.contains(e.target) && !rocketBtn.contains(e.target)) {
+rocketPopup.style.display = "none";
+}
+});
+
+// Handle form submission
+quickOrderForm.addEventListener("submit", (e) => {
+e.preventDefault();
+console.log('Form submitted');
+
+try {
+// Get form data
+const customerName = document.getElementById("customerName").value.trim();
+const serviceType = document.getElementById("serviceType").value;
+const urgencyLevel = document.getElementById("urgencyLevel").value;
+const customerPhone = document.getElementById("customerPhone").value.trim();
+const projectDescription = document.getElementById("projectDescription").value.trim();
+
+// Validate required fields
+if (!customerName || !serviceType || !urgencyLevel || !customerPhone || !projectDescription) {
+alert('אנא מלא את כל השדות הנדרשים');
+return;
+}
+
+// Create WhatsApp message
+const message = `🎓 *הזמנה חדשה - מ.א עזרה אקדמית*
+
+👤 *שם הלקוח:* ${customerName}
+📱 *טלפון:* ${customerPhone}
+🛠️ *סוג שירות:* ${serviceType}
+⏰ *רמת דחיפות:* ${urgencyLevel}
+
+📝 *תיאור הפרויקט:*
+${projectDescription}
+
+---
+⚡ הזמנה נשלחה דרך הזמנה מהירה באתר`;
+
+// Encode message for WhatsApp
+const encodedMessage = encodeURIComponent(message);
+const whatsappURL = `https://wa.me/972532829226?text=${encodedMessage}`;
+
+console.log('Opening WhatsApp with message:', message);
+
+// Open WhatsApp
+window.open(whatsappURL, '_blank');
+
+// Close popup and reset form
+rocketPopup.style.display = "none";
+quickOrderForm.reset();
+
+// Show success message
+showSuccessMessage();
+
+} catch (error) {
+console.error('Error in form submission:', error);
+alert('אירעה שגיאה בשליחת הטופס. אנא נסה שוב.');
+}
+});
+
+} else {
+console.error('Some rocket popup elements not found:', {
+rocketBtn: !!rocketBtn,
+rocketPopup: !!rocketPopup,
+rocketClose: !!rocketClose,
+quickOrderForm: !!quickOrderForm
+});
+}
+});
+
+// Success message function
+function showSuccessMessage() {
+const successMsg = document.createElement('div');
+successMsg.innerHTML = `
+<div style="
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+color: white;
+padding: 20px 30px;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+z-index: 9999;
+text-align: center;
+font-weight: 600;
+">
+✅ ההזמנה נשלחה בהצלחה!<br>
+תועברו לווטסאפ כדי לשלוח את הפרטים
+</div>
+`;
+document.body.appendChild(successMsg);
+
+setTimeout(() => {
+document.body.removeChild(successMsg);
+}, 3000);
+}
 });
 
 // Smooth scroll for anchor links
@@ -2098,113 +2447,73 @@ block: 'start'
 }
 });
 });
-</script>
-<div class="rocket-float" id="rocketBtn" title="הזמנה מהירה">
-<i class="fas fa-rocket"></i>
-</div>
-<div class="rocket-popup" id="rocketPopup">
-<form>
-<h3>🚀 הזמנה מהירה</h3>
-<input placeholder="שם מלא" required="" type="text"/>
-<select required="">
-<option value="">סוג שירות</option>
-<option>כתיבה</option>
-<option>סטטיסטיקה</option>
-</select>
-<select required="">
-<option value="">רמת דחיפות</option>
-<option>רגילה</option>
-<option>דחופה</option>
-</select>
-<input placeholder="050-1234567" required="" type="tel"/>
-<textarea placeholder="תיאור קצר" rows="3"></textarea>
-<div class="rocket-actions">
-<button id="rocketClose" type="button">❌</button>
-<a class="btn-whatsapp" href="https://wa.me/972532829226" target="_blank">שלח WhatsApp</a>
-</div>
-</form>
-</div>
-<a class="whatsapp-float" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת בעזרה אקדמית" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-<style>
-.rocket-float, .whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  left: 25px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-  cursor: pointer;
+
+// Add some interactive effects
+document.addEventListener('DOMContentLoaded', function() {
+// Add hover effect to problem cards
+const problemCards = document.querySelectorAll('.problem-card');
+problemCards.forEach(card => {
+card.addEventListener('mouseenter', function() {
+this.style.transform = 'scale(1.05) rotateY(5deg)';
+});
+card.addEventListener('mouseleave', function() {
+this.style.transform = 'scale(1) rotateY(0deg)';
+});
+});
+
+// Add click effect to buttons
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+button.addEventListener('click', function(e) {
+// Create ripple effect
+const ripple = document.createElement('span');
+const rect = this.getBoundingClientRect();
+const size = Math.max(rect.width, rect.height);
+const x = e.clientX - rect.left - size / 2;
+const y = e.clientY - rect.top - size / 2;
+
+ripple.style.width = ripple.style.height = size + 'px';
+ripple.style.left = x + 'px';
+ripple.style.top = y + 'px';
+ripple.classList.add('ripple');
+
+this.appendChild(ripple);
+
+setTimeout(() => {
+ripple.remove();
+}, 600);
+});
+});
+});
+
+// Add CSS for ripple effect
+const style = document.createElement('style');
+style.textContent = `
+.ripple {
+position: absolute;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.3);
+pointer-events: none;
+animation: ripple-animation 0.6s ease-out;
 }
-.rocket-float {
-  bottom: 100px;
-  background: #7f5af0;
-  color: white;
-  box-shadow: 0 4px 20px rgba(127, 90, 240, 0.4);
+
+@keyframes ripple-animation {
+0% {
+transform: scale(0);
+opacity: 1;
 }
-.whatsapp-float {
-  bottom: 25px;
-  background: #25d366;
-  color: white;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  text-decoration: none;
+100% {
+transform: scale(1);
+opacity: 0;
 }
-.rocket-popup {
-  position: fixed;
-  bottom: 180px;
-  left: 20px;
-  background: #0f172a;
-  border: 1px solid #38bdf8;
-  padding: 20px;
-  border-radius: 15px;
-  z-index: 1002;
-  width: 280px;
-  display: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.rocket-popup input, .rocket-popup select, .rocket-popup textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  font-size: 0.9em;
-  background: #1e293b;
-  color: #fff;
+
+.counting {
+color: var(--neon-blue) !important;
+text-shadow: 0 0 20px rgba(0, 212, 255, 0.8) !important;
 }
-.rocket-actions {
-  display: flex;
-  justify-content: space-between;
-}
-.rocket-actions button {
-  background: transparent;
-  color: #f87171;
-  border: none;
-  font-size: 1.2em;
-}
-.btn-whatsapp {
-  background: #25d366;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 25px;
-  text-decoration: none;
-}
-</style>
-<script>
-  document.getElementById("rocketBtn").addEventListener("click", () => {
-    const popup = document.getElementById("rocketPopup");
-    popup.style.display = popup.style.display === "block" ? "none" : "block";
-  });
-  document.getElementById("rocketClose").addEventListener("click", () => {
-    document.getElementById("rocketPopup").style.display = "none";
-  });
+`;
+document.head.appendChild(style);
 </script>
 </body>
 </html>
-
