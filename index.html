@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="he">
 <head>
@@ -8,7 +7,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
 :root {
 --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 --academic-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -24,13 +22,11 @@
 --glass-bg: rgba(255, 255, 255, 0.1);
 --glass-border: rgba(255, 255, 255, 0.2);
 }
-
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
-
 body {
 font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 direction: rtl;
@@ -39,7 +35,6 @@ color: #ffffff;
 line-height: 1.6;
 overflow-x: hidden;
 }
-
 /* רקע אקדמי עם אפקטים */
 .academic-bg {
 position: fixed;
@@ -54,18 +49,15 @@ radial-gradient(circle at 40% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
 linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
 animation: academicShift 25s ease-in-out infinite alternate;
 }
-
 @keyframes academicShift {
 0% { transform: scale(1) rotate(0deg); }
 100% { transform: scale(1.1) rotate(3deg); }
 }
-
 .container {
 max-width: 1400px;
 margin: 0 auto;
 padding: 0 20px;
 }
-
 /* אפקט זכוכית */
 .glass-morphism {
 background: var(--glass-bg);
@@ -74,7 +66,6 @@ border: 1px solid var(--glass-border);
 border-radius: 20px;
 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
-
 /* כותרת עם לחץ אקדמי */
 header {
 min-height: 100vh;
@@ -84,13 +75,11 @@ justify-content: center;
 position: relative;
 overflow: hidden;
 }
-
 .hero {
 text-align: center;
 z-index: 2;
 max-width: 1000px;
 }
-
 .stress-badge {
 display: inline-block;
 background: var(--stress-gradient);
@@ -103,7 +92,6 @@ margin-bottom: 30px;
 animation: pulse 2s infinite, slideDown 1s ease-out;
 box-shadow: 0 0 25px rgba(255, 107, 107, 0.5);
 }
-
 .hero h1 {
 font-size: clamp(3rem, 8vw, 6rem);
 font-weight: 900;
@@ -116,7 +104,6 @@ animation: slideUp 1s ease-out 0.3s both;
 text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
 line-height: 1.1;
 }
-
 .hero-subtitle {
 font-size: clamp(1.3rem, 3vw, 2rem);
 margin-bottom: 40px;
@@ -125,7 +112,6 @@ animation: slideUp 1s ease-out 0.6s both;
 color: #e0e0e0;
 line-height: 1.4;
 }
-
 .relief-promise {
 background: var(--relief-gradient);
 color: #2c3e50;
@@ -137,7 +123,6 @@ margin: 40px 0;
 animation: slideUp 1s ease-out 0.9s both;
 box-shadow: 0 15px 35px rgba(168, 237, 234, 0.3);
 }
-
 /* סטטיסטיקות לחץ אקדמי */
 .stress-stats {
 display: grid;
@@ -146,7 +131,6 @@ gap: 30px;
 margin: 60px 0;
 animation: slideUp 1s ease-out 1.2s both;
 }
-
 .stress-stat {
 text-align: center;
 padding: 30px;
@@ -158,7 +142,6 @@ transition: all 0.3s ease;
 position: relative;
 overflow: hidden;
 }
-
 .stress-stat::before {
 content: '';
 position: absolute;
@@ -170,17 +153,14 @@ background: var(--stress-gradient);
 opacity: 0.1;
 transition: left 0.5s ease;
 }
-
 .stress-stat:hover::before {
 left: 0;
 }
-
 .stress-stat:hover {
 transform: translateY(-10px) scale(1.05);
 box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
 border-color: var(--neon-orange);
 }
-
 .stress-number {
 font-size: 2.8em;
 font-weight: 900;
@@ -188,20 +168,17 @@ color: var(--neon-orange);
 margin-bottom: 15px;
 text-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
 }
-
 .stress-label {
 font-size: 1em;
 opacity: 0.9;
 position: relative;
 z-index: 2;
 }
-
 /* סקציות */
 .section {
 margin: 100px auto;
 position: relative;
 }
-
 .section-card {
 background: var(--glass-bg);
 backdrop-filter: blur(20px);
@@ -213,7 +190,6 @@ transition: all 0.3s ease;
 position: relative;
 overflow: hidden;
 }
-
 .section-card::before {
 content: '';
 position: absolute;
@@ -224,12 +200,10 @@ height: 4px;
 background: var(--academic-gradient);
 border-radius: 25px 25px 0 0;
 }
-
 .section-card:hover {
 transform: translateY(-10px);
 box-shadow: 0 30px 60px rgba(79, 172, 254, 0.2);
 }
-
 .section h2 {
 font-size: clamp(2rem, 5vw, 3rem);
 font-weight: 800;
@@ -241,7 +215,6 @@ background-clip: text;
 position: relative;
 display: inline-block;
 }
-
 .section h2::after {
 content: '';
 position: absolute;
@@ -253,7 +226,6 @@ background: var(--success-gradient);
 border-radius: 2px;
 animation: expandWidth 2s ease-out;
 }
-
 /* בעיות אקדמיות */
 .problems-grid {
 display: grid;
@@ -264,7 +236,6 @@ margin: 25px 0;
 max-width: 1200px;
 margin: 25px auto;
 }
-
 .problem-card {
 background: var(--glass-bg);
 backdrop-filter: blur(15px);
@@ -281,7 +252,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-
 .problem-card::before {
 content: '';
 position: absolute;
@@ -295,18 +265,15 @@ transition: all 0.5s ease;
 transform: translate(-50%, -50%);
 opacity: 0.1;
 }
-
 .problem-card:hover::before {
 width: 100%;
 height: 100%;
 }
-
 .problem-card:hover {
 transform: scale(1.05) rotateY(5deg);
 border-color: var(--neon-orange);
 box-shadow: 0 15px 35px rgba(255, 102, 0, 0.3);
 }
-
 .problem-icon {
 font-size: 2.5em;
 margin-bottom: 15px;
@@ -315,7 +282,6 @@ position: relative;
 z-index: 2;
 color: var(--neon-orange);
 }
-
 .problem-card h3 {
 color: var(--neon-orange);
 font-size: 1.1em;
@@ -324,7 +290,6 @@ margin-bottom: 10px;
 position: relative;
 z-index: 2;
 }
-
 .problem-card p {
 opacity: 0.9;
 position: relative;
@@ -333,7 +298,6 @@ line-height: 1.4;
 font-size: 0.9em;
 text-align: center;
 }
-
 /* סקציית סטטיסטיקות מרשימות */
 .stats-section {
 background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -342,7 +306,6 @@ margin: 80px 0;
 position: relative;
 overflow: hidden;
 }
-
 .stats-section::before {
 content: '';
 position: absolute;
@@ -350,23 +313,20 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background: 
+background:
 radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.2) 0%, transparent 50%),
 radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
 animation: statsShimmer 8s ease-in-out infinite alternate;
 }
-
 @keyframes statsShimmer {
 0% { opacity: 0.5; transform: scale(1); }
 100% { opacity: 1; transform: scale(1.05); }
 }
-
 .stats-hero {
 text-align: center;
 position: relative;
 z-index: 2;
 }
-
 .stats-hero h2 {
 font-size: clamp(2.5rem, 5vw, 4rem);
 font-weight: 900;
@@ -374,7 +334,6 @@ margin-bottom: 60px;
 color: #ffffff;
 text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-
 .stats-counter-grid {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -382,7 +341,6 @@ gap: 40px;
 max-width: 1200px;
 margin: 0 auto;
 }
-
 .stat-counter {
 background: rgba(255, 255, 255, 0.1);
 backdrop-filter: blur(20px);
@@ -394,7 +352,6 @@ transition: all 0.4s ease;
 position: relative;
 overflow: hidden;
 }
-
 .stat-counter::before {
 content: '';
 position: absolute;
@@ -405,17 +362,14 @@ height: 100%;
 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 transition: left 0.6s ease;
 }
-
 .stat-counter:hover::before {
 left: 100%;
 }
-
 .stat-counter:hover {
 transform: translateY(-15px) scale(1.05);
 box-shadow: 0 30px 60px rgba(79, 172, 254, 0.4);
 border-color: var(--neon-blue);
 }
-
 .stat-number {
 font-size: clamp(3rem, 6vw, 5rem);
 font-weight: 900;
@@ -424,7 +378,6 @@ margin-bottom: 15px;
 text-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
 line-height: 1;
 }
-
 .stat-label {
 font-size: 1.2em;
 font-weight: 600;
@@ -432,7 +385,6 @@ color: #ffffff;
 opacity: 0.9;
 line-height: 1.3;
 }
-
 /* סקציית המלצות לקוחות */
 .testimonials-section {
 background: linear-gradient(135deg, #0f3460 0%, #0e4b99 100%);
@@ -441,7 +393,6 @@ margin: 80px 0;
 position: relative;
 overflow: hidden;
 }
-
 .testimonials-section::before {
 content: '';
 position: absolute;
@@ -449,24 +400,21 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background: 
+background:
 radial-gradient(circle at 30% 40%, rgba(57, 255, 20, 0.1) 0%, transparent 50%),
 radial-gradient(circle at 70% 60%, rgba(255, 102, 0, 0.1) 0%, transparent 50%);
 animation: testimonialsShimmer 10s ease-in-out infinite alternate;
 }
-
 @keyframes testimonialsShimmer {
 0% { opacity: 0.3; transform: scale(1); }
 100% { opacity: 0.7; transform: scale(1.05); }
 }
-
 .testimonials-header {
 text-align: center;
 margin-bottom: 60px;
 position: relative;
 z-index: 2;
 }
-
 .testimonials-header h2 {
 font-size: clamp(2.5rem, 5vw, 4rem);
 font-weight: 900;
@@ -474,14 +422,12 @@ margin-bottom: 20px;
 color: #ffffff;
 text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
-
 .testimonials-subtitle {
 font-size: 1.3em;
 color: #e0e0e0;
 opacity: 0.9;
 font-weight: 600;
 }
-
 .testimonials-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -491,18 +437,50 @@ margin: 0 auto;
 position: relative;
 z-index: 2;
 }
-
+/* Carousel Styles */
+.testimonials-carousel {
+position: relative;
+max-width: 700px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+gap: 20px;
+}
+.testimonial-container {
+position: relative;
+width: 100%;
+height: 350px;
+overflow: hidden;
+border-radius: 25px;
+}
+.testimonial-slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transform: translateX(100%);
+transition: all 0.5s ease-in-out;
+}
+.testimonial-slide.active {
+opacity: 1;
+transform: translateX(0);
+}
+.testimonial-slide.prev {
+transform: translateX(-100%);
+}
 .testimonial-card {
+width: 100%;
+height: 100%;
 background: rgba(255, 255, 255, 0.1);
 backdrop-filter: blur(20px);
 border: 1px solid rgba(255, 255, 255, 0.2);
 border-radius: 25px;
 padding: 30px;
 position: relative;
-transition: all 0.4s ease;
 overflow: hidden;
 }
-
 .testimonial-card::before {
 content: '';
 position: absolute;
@@ -513,17 +491,14 @@ height: 100%;
 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 transition: left 0.6s ease;
 }
-
 .testimonial-card:hover::before {
 left: 100%;
 }
-
 .testimonial-card:hover {
 transform: translateY(-10px) scale(1.03);
 box-shadow: 0 25px 50px rgba(57, 255, 20, 0.3);
 border-color: var(--neon-green);
 }
-
 .grade-badge {
 position: absolute;
 top: -15px;
@@ -542,16 +517,9 @@ box-shadow: 0 5px 20px rgba(17, 153, 142, 0.5);
 border: 3px solid white;
 animation: gradePulse 2s ease-in-out infinite alternate;
 }
-
-@keyframes gradePulse {
-0% { transform: scale(1); }
-100% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(17, 153, 142, 0.7); }
-}
-
 .testimonial-content {
 margin-top: 20px;
 }
-
 .testimonial-content p {
 font-size: 1.1em;
 line-height: 1.6;
@@ -560,7 +528,6 @@ margin-bottom: 20px;
 font-style: italic;
 position: relative;
 }
-
 .testimonial-content p::before {
 content: '"';
 font-size: 3em;
@@ -571,32 +538,77 @@ right: -5px;
 font-family: serif;
 opacity: 0.3;
 }
-
 .student-info {
 border-top: 1px solid rgba(255, 255, 255, 0.2);
 padding-top: 15px;
 }
-
 .student-name {
 font-size: 1.1em;
 font-weight: 700;
 color: var(--neon-orange);
 margin-bottom: 5px;
 }
-
 .course-info {
 font-size: 0.9em;
 color: #e0e0e0;
 opacity: 0.8;
 font-weight: 500;
 }
-
+.carousel-nav {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+width: 60px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s ease;
+color: white;
+font-size: 1.5em;
+z-index: 10;
+}
+.carousel-nav:hover {
+background: rgba(255, 255, 255, 0.2);
+transform: scale(1.1);
+box-shadow: 0 10px 30px rgba(57, 255, 20, 0.3);
+border-color: var(--neon-green);
+}
+.carousel-nav:active {
+transform: scale(0.95);
+}
+.carousel-dots {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 30px;
+}
+.dot {
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.3);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.dot.active {
+background: var(--neon-green);
+box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+.dot:hover {
+background: rgba(255, 255, 255, 0.6);
+}
+@keyframes gradePulse {
+0% { transform: scale(1); }
+100% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(17, 153, 142, 0.7); }
+}
 /* סקציית מי אנחנו */
 .about-section {
 margin: 100px auto;
 position: relative;
 }
-
 .about-card {
 background: var(--glass-bg);
 backdrop-filter: blur(20px);
@@ -608,7 +620,6 @@ transition: all 0.3s ease;
 position: relative;
 overflow: hidden;
 }
-
 .about-card::before {
 content: '';
 position: absolute;
@@ -619,17 +630,14 @@ height: 5px;
 background: var(--warning-gradient);
 border-radius: 30px 30px 0 0;
 }
-
 .about-card:hover {
 transform: translateY(-10px);
 box-shadow: 0 35px 70px rgba(253, 187, 45, 0.2);
 }
-
 .about-header {
 text-align: center;
 margin-bottom: 50px;
 }
-
 .about-header h2 {
 font-size: clamp(2.5rem, 5vw, 3.5rem);
 font-weight: 800;
@@ -641,7 +649,6 @@ background-clip: text;
 position: relative;
 display: inline-block;
 }
-
 .about-header h2::after {
 content: '';
 position: absolute;
@@ -654,33 +661,28 @@ background: var(--success-gradient);
 border-radius: 2px;
 animation: expandWidth 2s ease-out;
 }
-
 .about-tagline {
 font-size: 1.3em;
 color: #e0e0e0;
 font-weight: 600;
 opacity: 0.9;
 }
-
 .about-content {
 max-width: 900px;
 margin: 0 auto;
 text-align: center;
 }
-
 .about-main-text {
 font-size: 1.4em;
 line-height: 1.8;
 margin-bottom: 30px;
 color: #ffffff;
 }
-
 .highlight-text {
 color: var(--neon-orange);
 font-weight: 700;
 text-shadow: 0 0 15px rgba(255, 102, 0, 0.5);
 }
-
 .about-secondary-text {
 font-size: 1.2em;
 line-height: 1.7;
@@ -688,14 +690,12 @@ margin-bottom: 50px;
 color: #e0e0e0;
 opacity: 0.9;
 }
-
 .about-values {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 30px;
 margin-top: 40px;
 }
-
 .value-item {
 background: rgba(255, 255, 255, 0.05);
 backdrop-filter: blur(10px);
@@ -707,7 +707,6 @@ transition: all 0.3s ease;
 position: relative;
 overflow: hidden;
 }
-
 .value-item::before {
 content: '';
 position: absolute;
@@ -721,18 +720,15 @@ transition: all 0.5s ease;
 transform: translate(-50%, -50%);
 opacity: 0.1;
 }
-
 .value-item:hover::before {
 width: 120%;
 height: 120%;
 }
-
 .value-item:hover {
 transform: translateY(-10px) scale(1.02);
 border-color: var(--neon-orange);
 box-shadow: 0 20px 40px rgba(253, 187, 45, 0.3);
 }
-
 .value-icon {
 font-size: 2.5em;
 color: var(--neon-orange);
@@ -740,26 +736,22 @@ margin-bottom: 15px;
 position: relative;
 z-index: 2;
 }
-
 .value-text {
 position: relative;
 z-index: 2;
 }
-
 .value-text h4 {
 font-size: 1.2em;
 font-weight: 700;
 color: #ffffff;
 margin-bottom: 8px;
 }
-
 .value-text p {
 font-size: 0.95em;
 color: #e0e0e0;
 opacity: 0.9;
 line-height: 1.4;
 }
-
 /* שירותים עם היפוך קלפים */
 .services-grid {
 display: grid;
@@ -771,7 +763,6 @@ justify-content: center;
 align-items: start;
 max-width: 1300px;
 }
-
 .service-card {
 position: relative;
 width: 100%;
@@ -782,9 +773,8 @@ transition: all 0.5s ease;
 overflow: hidden;
 justify-self: center;
 }
-
 .service-card::after {
-content: '💰 לחץ למחירון';
+content: ' 💰  לחץ למחירון';
 position: absolute;
 bottom: 15px;
 left: 50%;
@@ -797,38 +787,33 @@ font-size: 0.85em;
 font-weight: 600;
 color: var(--neon-green);
 border: 1px solid rgba(57, 255, 20, 0.4);
-opacity: 0;
+opacity: 0.9;
 transition: all 0.3s ease;
 z-index: 3;
 }
-
 .service-card:hover::after {
 opacity: 1;
+transform: translateX(-50%) scale(1.05);
 }
-
 .service-card.is-flipped::after {
-content: '👆 לחץ לחזרה';
+content: ' 👆  לחץ לחזרה';
 background: rgba(79, 172, 254, 0.2);
 border-color: rgba(79, 172, 254, 0.4);
 color: var(--neon-blue);
-opacity: 0;
-transition: opacity 0.3s ease;
+opacity: 0.9;
 }
-
 .service-card.is-flipped:hover::after {
 opacity: 1;
+transform: translateX(-50%) scale(1.05);
 }
-
 .service-card:hover {
 transform: translateY(-10px);
 box-shadow: 0 25px 50px rgba(57, 255, 20, 0.2);
 }
-
 .service-card.is-flipped:hover {
 transform: translateY(-10px);
 box-shadow: 0 25px 50px rgba(79, 172, 254, 0.3);
 }
-
 .service-front,
 .service-back {
 position: absolute;
@@ -845,7 +830,6 @@ box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 overflow: hidden;
 box-sizing: border-box;
 }
-
 .service-front {
 background: var(--glass-bg);
 backdrop-filter: blur(20px);
@@ -854,7 +838,6 @@ opacity: 1;
 z-index: 2;
 transform: scale(1);
 }
-
 .service-back {
 background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 border: 2px solid var(--neon-blue);
@@ -865,19 +848,16 @@ opacity: 0;
 z-index: 1;
 transform: scale(0.9);
 }
-
 .service-card.is-flipped .service-front {
 opacity: 0;
 z-index: 1;
 transform: scale(0.9);
 }
-
 .service-card.is-flipped .service-back {
 opacity: 1;
 z-index: 2;
 transform: scale(1);
 }
-
 .service-icon {
 font-size: 3em;
 color: var(--neon-green);
@@ -890,7 +870,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 .service-front h3 {
 font-size: 1.8em;
 font-weight: 700;
@@ -900,7 +879,6 @@ position: relative;
 z-index: 2;
 line-height: 1.3;
 }
-
 .service-front p {
 opacity: 0.95;
 line-height: 1.6;
@@ -911,7 +889,6 @@ font-size: 1.3em;
 font-weight: 600;
 color: #f0f0f0;
 }
-
 .back-content {
 text-align: center;
 line-height: 1.4;
@@ -919,7 +896,6 @@ width: 100%;
 overflow-y: auto;
 max-height: 100%;
 }
-
 .price-item {
 background: rgba(79, 172, 254, 0.2);
 padding: 12px 20px;
@@ -935,31 +911,26 @@ animation: slideInRight 0.5s ease forwards;
 font-size: 1.1em;
 line-height: 1.4;
 }
-
 .price-item:nth-child(1) { animation-delay: 0.1s; }
 .price-item:nth-child(2) { animation-delay: 0.2s; }
 .price-item:nth-child(3) { animation-delay: 0.3s; }
 .price-item:nth-child(4) { animation-delay: 0.4s; }
-
 @keyframes slideInRight {
 to {
 transform: translateX(0);
 opacity: 1;
 }
 }
-
 .price-item:hover {
 background: rgba(79, 172, 254, 0.4);
 transform: scale(1.02);
 border-color: var(--neon-green);
 }
-
 .service-back h3 {
 color: var(--neon-blue);
 font-size: 1.6em;
 margin-bottom: 20px;
 }
-
 /* קריאה לפעולה */
 .cta {
 background: var(--academic-gradient);
@@ -971,7 +942,6 @@ position: relative;
 overflow: hidden;
 box-shadow: 0 30px 60px rgba(79, 172, 254, 0.4);
 }
-
 .cta::before {
 content: '';
 position: absolute;
@@ -982,12 +952,10 @@ bottom: 0;
 background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
 animation: pulseGlow 3s ease-in-out infinite;
 }
-
 .cta-content {
 position: relative;
 z-index: 2;
 }
-
 .cta-urgency {
 background: rgba(0, 0, 0, 0.3);
 backdrop-filter: blur(15px);
@@ -999,14 +967,12 @@ font-weight: 700;
 font-size: 1.2em;
 animation: blink 2s infinite;
 }
-
 .cta h2 {
 font-size: clamp(2.5rem, 6vw, 4rem);
 margin-bottom: 30px;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 color: white;
 }
-
 .cta-buttons {
 display: flex;
 gap: 30px;
@@ -1014,7 +980,6 @@ justify-content: center;
 flex-wrap: wrap;
 margin-top: 50px;
 }
-
 .btn {
 padding: 20px 40px;
 border: none;
@@ -1030,7 +995,6 @@ cursor: pointer;
 position: relative;
 overflow: hidden;
 }
-
 .btn::before {
 content: '';
 position: absolute;
@@ -1041,35 +1005,29 @@ height: 100%;
 background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
 transition: left 0.6s ease;
 }
-
 .btn:hover::before {
 left: 100%;
 }
-
 .btn-primary {
 background: linear-gradient(135deg, #ffffff, #f0f0f0);
 color: #4facfe;
 box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
-
 .btn-primary:hover {
 transform: translateY(-5px) scale(1.05);
 box-shadow: 0 20px 40px rgba(255, 255, 255, 0.4);
 }
-
 .btn-secondary {
 background: rgba(255, 255, 255, 0.1);
 color: white;
 border: 2px solid white;
 backdrop-filter: blur(15px);
 }
-
 .btn-secondary:hover {
 background: white;
 color: #4facfe;
 transform: translateY(-5px) scale(1.05);
 }
-
 /* Footer */
 .footer {
 background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -1079,7 +1037,6 @@ position: relative;
 overflow: hidden;
 border-top: 2px solid var(--academic-gradient);
 }
-
 .footer::before {
 content: '';
 position: absolute;
@@ -1087,17 +1044,15 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background: 
+background:
 radial-gradient(circle at 20% 30%, rgba(79, 172, 254, 0.1) 0%, transparent 50%),
 radial-gradient(circle at 80% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
 animation: footerShimmer 12s ease-in-out infinite alternate;
 }
-
 @keyframes footerShimmer {
 0% { opacity: 0.3; transform: scale(1); }
 100% { opacity: 0.6; transform: scale(1.02); }
 }
-
 .footer-content {
 text-align: center;
 position: relative;
@@ -1105,7 +1060,6 @@ z-index: 2;
 max-width: 800px;
 margin: 0 auto;
 }
-
 .footer-logo {
 font-size: clamp(2rem, 4vw, 2.8rem);
 font-weight: 900;
@@ -1116,7 +1070,6 @@ background: var(--academic-gradient);
 background-clip: text;
 text-shadow: 0 0 30px rgba(79, 172, 254, 0.3);
 }
-
 .footer-tagline {
 font-size: 1.1em;
 color: #e0e0e0;
@@ -1125,7 +1078,6 @@ opacity: 0.9;
 font-weight: 500;
 line-height: 1.4;
 }
-
 .footer-copyright {
 font-size: 0.95em;
 color: #b0b0b0;
@@ -1133,14 +1085,12 @@ margin-bottom: 15px;
 opacity: 0.8;
 font-weight: 400;
 }
-
 .footer-established {
 font-size: 0.9em;
 color: var(--neon-green);
 font-weight: 600;
 opacity: 0.9;
 }
-
 .footer-divider {
 width: 60px;
 height: 3px;
@@ -1148,7 +1098,6 @@ background: var(--success-gradient);
 margin: 20px auto;
 border-radius: 2px;
 }
-
 /* כפתורי פעולה צפים */
 .whatsapp-float {
 position: fixed;
@@ -1170,17 +1119,14 @@ text-decoration: none;
 transition: all 0.3s ease;
 animation: whatsappPulse 2s ease-in-out infinite;
 }
-
 .whatsapp-float:hover {
 transform: scale(1.1);
 box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
 background: #128c7e;
 }
-
 .whatsapp-float:active {
 transform: scale(0.95);
 }
-
 @keyframes whatsappPulse {
 0% {
 transform: scale(1);
@@ -1195,7 +1141,6 @@ transform: scale(1);
 box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 }
 }
-
 .rocket-float {
 position: fixed;
 width: 60px;
@@ -1217,17 +1162,14 @@ transition: all 0.3s ease;
 border: none;
 outline: none;
 }
-
 .rocket-float:hover {
 transform: scale(1.1);
 box-shadow: 0 6px 25px rgba(127, 90, 240, 0.6);
 background: #6a4de8;
 }
-
 .rocket-float:active {
 transform: scale(0.95);
 }
-
 .rocket-popup {
 position: fixed;
 bottom: 180px;
@@ -1242,7 +1184,6 @@ display: none;
 box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 backdrop-filter: blur(20px);
 }
-
 .rocket-popup h3 {
 color: #38bdf8;
 margin-bottom: 20px;
@@ -1250,9 +1191,8 @@ text-align: center;
 font-size: 1.1em;
 font-weight: 700;
 }
-
-.rocket-popup input, 
-.rocket-popup select, 
+.rocket-popup input,
+.rocket-popup select,
 .rocket-popup textarea {
 width: 100%;
 margin-bottom: 15px;
@@ -1265,7 +1205,6 @@ color: #fff;
 font-family: 'Inter', sans-serif;
 transition: all 0.3s ease;
 }
-
 .rocket-popup input:focus,
 .rocket-popup select:focus,
 .rocket-popup textarea:focus {
@@ -1274,24 +1213,20 @@ border-color: #00d4ff;
 box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 background: rgba(255, 255, 255, 0.15);
 }
-
 .rocket-popup input::placeholder,
 .rocket-popup textarea::placeholder {
 color: rgba(255, 255, 255, 0.7);
 }
-
 .rocket-popup select option {
 background: #1a1a2e;
 color: #fff;
 }
-
 .rocket-actions {
 display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 20px;
 }
-
 .rocket-actions button {
 padding: 10px 15px;
 border: none;
@@ -1300,18 +1235,15 @@ cursor: pointer;
 font-weight: 600;
 transition: all 0.3s ease;
 }
-
 #rocketClose {
 background: rgba(248, 113, 113, 0.2);
 color: #f87171;
 font-size: 1.1em;
 }
-
 #rocketClose:hover {
 background: rgba(248, 113, 113, 0.4);
 transform: scale(1.1);
 }
-
 .btn-whatsapp {
 background: #25d366;
 color: white;
@@ -1320,80 +1252,65 @@ display: flex;
 align-items: center;
 gap: 5px;
 }
-
 .btn-whatsapp:hover {
 background: #128c7e;
 transform: scale(1.05);
 box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
 }
-
 /* אנימציות */
 @keyframes slideDown {
 from { opacity: 0; transform: translateY(-30px); }
 to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes slideUp {
 from { opacity: 0; transform: translateY(30px); }
 to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes pulse {
 0%, 100% { transform: scale(1); }
 50% { transform: scale(1.05); }
 }
-
 @keyframes bounce {
 0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
 40% { transform: translateY(-10px); }
 60% { transform: translateY(-5px); }
 }
-
 @keyframes float {
 0%, 100% { transform: translateY(0px); }
 50% { transform: translateY(-10px); }
 }
-
 @keyframes blink {
 0%, 50% { opacity: 1; }
 51%, 100% { opacity: 0.7; }
 }
-
 @keyframes pulseGlow {
 0%, 100% { transform: scale(1); opacity: 0.8; }
 50% { transform: scale(1.05); opacity: 1; }
 }
-
 @keyframes expandWidth {
 from { width: 0; }
 to { width: 80px; }
 }
-
 @keyframes whatsappBounce {
 0%, 100% { transform: scale(1) rotate(0deg); }
 25% { transform: scale(1.1) rotate(-5deg); }
 75% { transform: scale(1.1) rotate(5deg); }
 }
-
 @keyframes phonePulse {
 0%, 100% { transform: scale(1); }
 50% { transform: scale(1.2); }
 }
-
 /* אפקטים מיוחדים לכפתורי קשר */
 .btn-primary:hover i {
 animation: whatsappBounce 0.6s ease-in-out;
 }
-
 .btn-secondary:hover i {
 animation: phonePulse 0.5s ease-in-out;
 }
-
 /* רספונסיבי */
 @media (max-width: 1600px) {
 .services-grid { max-width: 1400px !important; }
 }
-
 @media (max-width: 1200px) {
 .services-grid {
 max-width: 1000px !important;
@@ -1401,14 +1318,12 @@ grid-template-columns: repeat(2, 1fr) !important;
 grid-template-rows: repeat(5, 1fr) !important;
 }
 .service-card { width: 320px; }
-
 .stats-counter-grid {
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(2, 1fr);
 gap: 30px;
 }
 }
-
 @media (max-width: 900px) {
 .services-grid {
 max-width: 700px !important;
@@ -1417,7 +1332,6 @@ grid-template-rows: repeat(5, 1fr) !important;
 }
 .service-card { width: 300px; }
 }
-
 @media (max-width: 768px) {
 .services-grid {
 grid-template-columns: 1fr !important;
@@ -1425,117 +1339,97 @@ grid-template-rows: repeat(9, 1fr) !important;
 max-width: 400px !important;
 }
 .service-card { width: 100%; max-width: 400px; }
-
-.stress-stats { 
-grid-template-columns: 1fr 1fr; 
-gap: 20px; 
+.stress-stats {
+grid-template-columns: 1fr 1fr;
+gap: 20px;
 }
-
-.problems-grid { 
-grid-template-columns: 1fr !important; 
+.problems-grid {
+grid-template-columns: 1fr !important;
 grid-template-rows: repeat(6, 1fr) !important;
-gap: 15px; 
+gap: 15px;
 }
-
-.cta-buttons { 
-flex-direction: column; 
-align-items: center; 
+.cta-buttons {
+flex-direction: column;
+align-items: center;
 }
-
 .section-card, .cta {
 padding: 40px 30px;
 margin: 40px 0;
 }
-
 .stats-section {
 padding: 60px 0;
 margin: 40px 0;
 }
-
 .stats-counter-grid {
 grid-template-columns: 1fr;
 gap: 25px;
 padding: 0 20px;
 }
-
 .stat-counter {
 padding: 30px 20px;
 }
-
 .stats-hero h2 {
 margin-bottom: 40px;
 }
-
 .testimonials-section {
 padding: 60px 0;
 margin: 40px 0;
 }
-
-.testimonials-grid {
-grid-template-columns: 1fr;
-gap: 25px;
-padding: 0 20px;
+.testimonials-carousel {
+max-width: 500px;
 }
-
+.testimonial-wrapper {
+height: 250px;
+}
 .testimonial-card {
-padding: 25px 20px;
+padding: 20px;
 }
-
-.testimonials-header h2 {
-margin-bottom: 30px;
+.carousel-nav {
+width: 50px;
+height: 50px;
+font-size: 1.2em;
 }
-
 .grade-badge {
-font-size: 1.8em;
-width: 55px;
-height: 55px;
-top: -12px;
+font-size: 1.6em;
+width: 50px;
+height: 50px;
+top: -10px;
 right: 15px;
 }
-
+}
 .about-card {
 padding: 40px 30px;
 }
-
 .about-values {
 grid-template-columns: 1fr;
 gap: 20px;
 }
-
 .value-item {
 padding: 25px 20px;
 }
-
 .about-main-text {
 font-size: 1.2em;
 }
-
 .about-secondary-text {
 font-size: 1.1em;
 }
-
 .footer {
 padding: 40px 0 20px 0;
 margin-top: 60px;
 }
-
 .footer-content {
 padding: 0 20px;
 }
-
 .footer-tagline {
 font-size: 1em;
 margin-bottom: 20px;
 }
-
 .footer-copyright {
 font-size: 0.9em;
 }
-
 .footer-established {
 font-size: 0.85em;
 }
-
 .whatsapp-float {
 width: 55px;
 height: 55px;
@@ -1543,7 +1437,6 @@ font-size: 24px;
 bottom: 20px;
 left: 20px;
 }
-
 .rocket-float {
 width: 55px;
 height: 55px;
@@ -1552,27 +1445,22 @@ bottom: 90px;
 left: 20px;
 }
 }
-
 @media (max-width: 480px) {
-.hero h1 { 
-font-size: 2.5rem; 
+.hero h1 {
+font-size: 2.5rem;
 }
-
-.stress-stats { 
-grid-template-columns: 1fr; 
+.stress-stats {
+grid-template-columns: 1fr;
 }
-
-.btn { 
-padding: 15px 25px; 
-font-size: 1rem; 
+.btn {
+padding: 15px 25px;
+font-size: 1rem;
 }
-
-.problems-grid { 
-grid-template-columns: 1fr !important; 
+.problems-grid {
+grid-template-columns: 1fr !important;
 grid-template-rows: repeat(6, 1fr) !important;
-gap: 12px; 
+gap: 12px;
 }
-
 .whatsapp-float {
 width: 50px;
 height: 50px;
@@ -1580,7 +1468,6 @@ font-size: 22px;
 bottom: 15px;
 left: 15px;
 }
-
 .rocket-float {
 width: 50px;
 height: 50px;
@@ -1589,124 +1476,123 @@ bottom: 80px;
 left: 15px;
 }
 }
-
 /* Quick Order Icon Styles */
 .quick-order-icon {
-  position: relative;
-  display: inline-block;
-  animation: bounce 1.5s infinite;
-  z-index: 1000;
+position: relative;
+display: inline-block;
+animation: bounce 1.5s infinite;
+z-index: 1000;
 }
-
 .quick-order-icon img {
-  width: 80px;
-  height: auto;
+width: 80px;
+height: auto;
 }
-
 .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: #ff3b3b;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 3px 6px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+position: absolute;
+top: -10px;
+right: -10px;
+background-color: #ff3b3b;
+color: white;
+font-size: 12px;
+font-weight: bold;
+padding: 3px 6px;
+border-radius: 12px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
+0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+40% {transform: translateY(-10px);}
+60% {transform: translateY(-5px);}
 }
-
 /* Responsive adjustments for mobile */
 @media (max-width: 600px) {
-  .quick-order-icon img { width: 60px; }
-  .badge { font-size: 10px; padding: 2px 5px; top: -8px; right: -8px; }
+.quick-order-icon img { width: 60px; }
+.badge { font-size: 10px; padding: 2px 5px; top: -8px; right: -8px; }
 }
-
-
 /* Quick Order red circular button replacing cap icon */
 .rocket-float {
-  background: #ff3b3b !important;
-  box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.6);
-  animation: pulseRing 2s infinite;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  text-align: center;
-  line-height: 1;
+background: #ff3b3b !important;
+box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.6);
+animation: pulseRing 2s infinite;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 800;
+text-align: center;
+line-height: 1;
 }
-
 .rocket-float .qoline1,
 .rocket-float .qoline2 {
-  display: block;
-  font-size: 11px;
-  color: #ffffff;
+display: block;
+font-size: 11px;
+color: #ffffff;
 }
-
 .rocket-float .qoline2 {
-  margin-top: 2px;
+margin-top: 2px;
 }
-
 .rocket-float .hand-pointer {
-  position: absolute;
-  right: -10px;
-  bottom: -8px;
-  font-size: 20px;
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
-  animation: tap 1.6s ease-in-out infinite;
+position: absolute;
+right: -10px;
+bottom: -8px;
+font-size: 20px;
+filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+animation: tap 1.6s ease-in-out infinite;
 }
-
 @keyframes pulseRing {
-  0% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.6); transform: translateY(0); }
-  70% { box-shadow: 0 0 0 18px rgba(255, 59, 59, 0); transform: translateY(-2px); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0); transform: translateY(0); }
+0% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.6); transform: translateY(0); }
+70% { box-shadow: 0 0 0 18px rgba(255, 59, 59, 0); transform: translateY(-2px); }
+100% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0); transform: translateY(0); }
 }
-
 @keyframes tap {
-  0%, 100% { transform: translate(0,0) scale(1); opacity: 0.9; }
-  50% { transform: translate(-2px, -4px) scale(1.08); opacity: 1; }
+0%, 100% { transform: translate(0,0) scale(1); opacity: 0.9; }
+50% { transform: translate(-2px, -4px) scale(1.08); opacity: 1; }
 }
-
 /* Hover effect for desktop */
 .rocket-float:hover {
-  transform: scale(1.08);
+transform: scale(1.08);
 }
-
 /* Mobile tweaks */
 @media (max-width: 600px) {
-  .rocket-float {
-    width: 56px !important;
-    height: 56px !important;
-  }
-  .rocket-float .qoline1, .rocket-float .qoline2 {
-    font-size: 10px;
-  }
-  .rocket-float .hand-pointer {
-    right: -8px;
-    bottom: -6px;
-    font-size: 18px;
-  }
+.rocket-float {
+width: 56px !important;
+height: 56px !important;
+}
+.rocket-float .qoline1, .rocket-float .qoline2 {
+font-size: 10px;
+}
+.rocket-float .hand-pointer {
+right: -8px;
+bottom: -6px;
+font-size: 18px;
+}
 }
 
+/* ===== תיקון גלישת טקסט בכרטיסי שירות ===== */
+.service-front h3 {
+	font-size: 1.1em !important;
+	line-height: 1.3 !important;
+}
+.service-front p[style] {
+	font-size: 0.8em !important;
+	line-height: 1.4 !important;
+	margin: 4px 0 !important;
+}
+.service-front div[style] > p {
+	font-size: 0.85em !important;
+	line-height: 1.5 !important;
+}
+/* ============================================== */
 </style>
 </head>
 <body>
 <div class="academic-bg"></div>
-
-<!-- כפתורי פעולה צפים -->
-<button class="rocket-float" style="position: fixed; width: 60px; height: 60px; bottom: 100px; left: 25px; background: #ff3b3b; color: white; border-radius: 50%; border: none; cursor: pointer; z-index: 9999; font-size: 24px;" onclick="document.getElementById('rocketPopup').style.display = document.getElementById('rocketPopup').style.display === 'block' ? 'none' : 'block';">
-<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span>
+<button class="rocket-float" style="position: fixed; width: 60px; height: 60px; bottom: 100px; left: 25px; background: #ff3b3b; color: white; border-radius: 50%; border: none; cursor: pointer; z-index: 9999; font-size: 24px;"
+onclick="document.getElementById('rocketPopup').style.display = document.getElementById('rocketPopup').style.display === 'block' ? 'none' : 'block';">
+<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer"> ☝️ </span>
 </button>
-
 <div class="rocket-popup" id="rocketPopup" style="position: fixed; bottom: 180px; left: 20px; background: #1a1a2e; border: 2px solid #38bdf8; padding: 25px; border-radius: 20px; z-index: 9998; width: 320px; display: none; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
 <form id="quickOrderForm" onsubmit="handleFormSubmit(event)">
-<h3 style="color: #38bdf8; margin-bottom: 20px; text-align: center;">🚀 הזמנה מהירה</h3>
+<h3 style="color: #38bdf8; margin-bottom: 20px; text-align: center;"> 🚀  הזמנה מהירה</h3>
 <input id="customerName" placeholder="שם מלא" required type="text" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
 <select id="serviceType" required style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;">
 <option value="">סוג שירות</option>
@@ -1731,67 +1617,54 @@ left: 15px;
 <input id="customerPhone" placeholder="050-1234567" required type="tel" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
 <textarea id="projectDescription" placeholder="תיאור קצר של הפרויקט והדרישות" rows="3" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff; resize: vertical;"></textarea>
 <div style="display: flex; justify-content: space-between; align-items: center;">
-<button type="button" onclick="document.getElementById('rocketPopup').style.display = 'none'" style="background: rgba(248, 113, 113, 0.2); color: #f87171; border: none; padding: 10px; border-radius: 8px; cursor: pointer;">❌</button>
-<button type="submit" style="background: #25d366; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">שלח הזמנה 📤</button>
+<button type="button" onclick="document.getElementById('rocketPopup').style.display = 'none'" style="background: rgba(248, 113, 113, 0.2); color: #f87171; border: none; padding: 10px; border-radius: 8px; cursor: pointer;"> ❌ </button>
+<button type="submit" style="background: #25d366; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">שלח הזמנה  📤 </button>
 </div>
 </form>
 </div>
-
 <script>
 function handleFormSubmit(event) {
 event.preventDefault();
 console.log('Form submitted');
-
 // Get form data
 const customerName = document.getElementById('customerName').value.trim();
 const serviceType = document.getElementById('serviceType').value;
 const urgencyLevel = document.getElementById('urgencyLevel').value;
 const customerPhone = document.getElementById('customerPhone').value.trim();
 const projectDescription = document.getElementById('projectDescription').value.trim();
-
 // Validate required fields
 if (!customerName || !serviceType || !urgencyLevel || !customerPhone || !projectDescription) {
 alert('אנא מלא את כל השדות הנדרשים');
 return;
 }
-
 // Create WhatsApp message
-const message = `<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> *הזמנה חדשה - מ.א עזרה אקדמית*
-
-👤 *שם הלקוח:* ${customerName}
-📱 *טלפון:* ${customerPhone}
-🛠️ *סוג שירות:* ${serviceType}
-⏰ *רמת דחיפות:* ${urgencyLevel}
-
-📝 *תיאור הפרויקט:*
+const message = ` 🚀  *הזמנה חדשה - מ.א עזרה אקדמית*
+👤  *שם הלקוח:* ${customerName}
+📱  *טלפון:* ${customerPhone}
+🛠️  *סוג שירות:* ${serviceType}
+⏰  *רמת דחיפות:* ${urgencyLevel}
+📝  *תיאור הפרויקט:*
 ${projectDescription}
-
 ---
-⚡ הזמנה נשלחה דרך הזמנה מהירה באתר`;
-
+⚡  הזמנה נשלחה דרך הזמנה מהירה באתר`;
 // Encode message for WhatsApp
 const encodedMessage = encodeURIComponent(message);
 const whatsappURL = `https://wa.me/972532829226?text=${encodedMessage}`;
-
 // Open WhatsApp
 window.open(whatsappURL, '_blank');
-
 // Close popup and reset form
 document.getElementById('rocketPopup').style.display = 'none';
 document.getElementById('quickOrderForm').reset();
-
 // Show success message
 const successMsg = document.createElement('div');
-successMsg.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-align: center; font-weight: 600;">✅ ההזמנה נשלחה בהצלחה!<br>תועברו לווטסאפ כדי לשלוח את הפרטים</div>`;
+successMsg.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-align: center; font-weight: 600;"> ✅  ההזמנה נשלחה בהצלחה!<br>תועברו לווטסאפ כדי לשלוח את הפרטים</div>`;
 document.body.appendChild(successMsg);
 setTimeout(() => document.body.removeChild(successMsg), 3000);
 }
 </script>
-
 <a class="whatsapp-float" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת בעזרה אקדמית" target="_blank" title="צור קשר בWhatsApp">
 <i class="fab fa-whatsapp"></i>
 </a>
-
 <header>
 <div class="container">
 <div class="hero">
@@ -1818,14 +1691,13 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="stress-label">הצלחה מובטחת בעבודות</div>
 </div>
 <div class="stress-stat">
-<div class="stress-number">🔒</div>
+<div class="stress-number"> 🔒 </div>
 <div class="stress-label">סודיות ודיסקרטיות מוחלטת</div>
 </div>
 </div>
 </div>
 </div>
 </header>
-
 <div class="container">
 <section class="section">
 <div class="section-card">
@@ -1880,7 +1752,6 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </section>
-
 <section class="stats-section">
 <div class="container">
 <div class="stats-hero">
@@ -1906,14 +1777,18 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </section>
-
 <section class="testimonials-section">
 <div class="container">
 <div class="testimonials-header">
 <h2><i class="fas fa-graduation-cap"></i> סטודנטים מרוצים מהשירות</h2>
 <p class="testimonials-subtitle">הציונים והמשובים מדברים בעד עצמם</p>
 </div>
-<div class="testimonials-grid">
+<div class="testimonials-carousel">
+<button class="carousel-nav prev-btn" onclick="changeTestimonial(-1)">
+<i class="fas fa-chevron-right"></i>
+</button>
+<div class="testimonial-container">
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">98</div>
 <div class="testimonial-content">
@@ -1924,6 +1799,8 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+</div>
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">91</div>
 <div class="testimonial-content">
@@ -1934,6 +1811,8 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+</div>
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">85</div>
 <div class="testimonial-content">
@@ -1944,6 +1823,8 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+</div>
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">90</div>
 <div class="testimonial-content">
@@ -1954,6 +1835,8 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+</div>
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">93</div>
 <div class="testimonial-content">
@@ -1964,6 +1847,8 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+</div>
+<div class="testimonial-slide">
 <div class="testimonial-card">
 <div class="grade-badge">88</div>
 <div class="testimonial-content">
@@ -1976,8 +1861,20 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
+<button class="carousel-nav next-btn" onclick="changeTestimonial(1)">
+<i class="fas fa-chevron-left"></i>
+</button>
+</div>
+<div class="carousel-dots">
+<span class="dot active" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+<span class="dot" onclick="currentSlide(5)"></span>
+<span class="dot" onclick="currentSlide(6)"></span>
+</div>
+</div>
 </section>
-
 <section class="about-section">
 <div class="container">
 <div class="about-card">
@@ -1987,13 +1884,13 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 <div class="about-content">
 <p class="about-main-text">
-<span class="highlight-text">מ.א עזרה אקדמית</span> - הקמה מתוך הבנה עמוקה של האתגרים העומדים בפני סטודנטים בישראל. 
-אנו צוות של בוגרי תארים מתקדמים, כל אחד מומחה בתחומו, שמאמינים כי 
+<span class="highlight-text">מ.א עזרה אקדמית</span> - הקמה מתוך הבנה עמוקה של האתגרים העומדים בפני סטודנטים בישראל.
+אנו צוות של בוגרי תארים מתקדמים, כל אחד מומחה בתחומו, שמאמינים כי
 לכל סטודנט מגיעה ההזדמנות שווה להצליח.
 </p>
 <p class="about-secondary-text">
-המטרה שלנו היא לא רק לספק עזרה נקודתית, אלא להעניק לכם כלים, ביטחון ושקט נפשי 
-כדי שתוכלו להתמקד במה שחשוב באמת. אנו מחויבים לאתיקה מקצועית, דיסקרטיות מוחלטת, 
+המטרה שלנו היא לא רק לספק עזרה נקודתית, אלא להעניק לכם כלים, ביטחון ושקט נפשי
+כדי שתוכלו להתמקד במה שחשוב באמת. אנו מחויבים לאתיקה מקצועית, דיסקרטיות מוחלטת,
 שמירה על סודיות הלקוח ושירות איכותי ונגיש.
 </p>
 <div class="about-values">
@@ -2023,7 +1920,6 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </section>
-
 <section class="section">
 <div class="section-card">
 <h2><i class="fas fa-lightbulb"></i> השירותים שלנו</h2>
@@ -2037,208 +1933,202 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-pen-fancy"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;">✍️ כתיבה מקצועית של עבודות אקדמיות</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;"> ✍️  כתיבה מקצועית של עבודות אקדמיות</h3>
 <p style="font-size: 0.85em; margin-bottom: 10px; font-weight: 600;">עבודות מקוריות ב־100%, מותאמות לקורס, להנחיות המרצה ולמבנה האקדמי הנדרש.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">מתאים לכל שלב בתואר ולכל תחום במדעי הרוח, החברה, החינוך, המשפטים ועוד...</p>
 <div style="margin-top: 12px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 10px; font-size: 1.2em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 1.1em; line-height: 1.4; text-align: right;">
-<p style="margin: 5px 0; font-size: 1.15em;">✅📝 מטלת אמצע / סוף קורס</p>
-<p style="margin: 4px 0; font-size: 1.15em;">✅📄 פרו־סמינריון בסיסי או מורחב</p>
-<p style="margin: 4px 0; font-size: 1.15em;">✅📊 סמינריון אמפירי -- כמותני / איכותני</p>
-<p style="margin: 4px 0; font-size: 1.15em;">✅<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> עבודת גמר / תזה</p>
+<p style="margin: 5px 0; font-size: 1.15em;"> ✅📝  מטלת אמצע / סוף קורס</p>
+<p style="margin: 4px 0; font-size: 1.15em;"> ✅📄  פרו־סמינריון בסיסי או מורחב</p>
+<p style="margin: 4px 0; font-size: 1.15em;"> ✅📊  סמינריון אמפירי -- כמותני / איכותני</p>
+<p style="margin: 4px 0; font-size: 1.15em;"> ✅🎓  עבודת גמר / תזה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 12px; font-size: 1.05em; line-height: 1.4;">וכל עבודה אחרת שתצטרכו -- לפי דרישה והתאמה אישית</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון כתיבה</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון כתיבה</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי היקף, מורכבות ודחיפות ההגשה</p>
 <div class="back-content">
-<div class="price-item">📝 מטלת אמצע/סוף (עד-5 עמ') 450/350 ₪</div>
-<div class="price-item">📄 פרו־סמינריון בסיסי/מורחב (עד-10 עמ') 1,800/1,200 ₪</div>
-<div class="price-item">📊 סמינריון אמפירי/כמותני (עד-10 עמ') 2,900 ₪</div>
-<div class="price-item"><span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> עבודת גמר/תזה (עד-35 עמ') 5,500 ₪</div>
+<div class="price-item"> 📝  מטלת אמצע/סוף (עד-5 עמ') 450/350 ₪</div>
+<div class="price-item"> 📄  פרו־סמינריון בסיסי/מורחב (עד-10 עמ') 1,800/1,200 ₪</div>
+<div class="price-item"> 📊  סמינריון אמפירי/כמותני (עד-10 עמ') 2,900 ₪</div>
+<div class="price-item"> 🎓  עבודת גמר/תזה (עד-35 עמ') 5,500 ₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="statistics">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-chart-bar"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;">📊 ניתוחים סטטיסטיים + בניית שאלונים</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;"> 📊  ניתוחים סטטיסטיים + בניית שאלונים</h3>
 <p style="font-size: 0.85em; margin-bottom: 10px; font-weight: 600;">שירות שלם ולגיטימי לסטודנטים, חוקרים ועבודות סמינר/גמר.</p>
 <div style="margin-top: 10px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 8px; font-size: 1.1em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 1.0em; line-height: 1.3; text-align: right;">
-<p style="margin: 4px 0; font-size: 1.1em;">✅ יצירת שאלונים דיגיטליים (Google Forms)</p>
-<p style="margin: 4px 0; font-size: 1.1em;">✅ אפיון לפי משתני המחקר + לוגיקת ניתוב</p>
-<p style="margin: 4px 0; font-size: 1.1em;">✅ ניתוחים סטטיסטיים ב-SPSS/Excel</p>
-<p style="margin: 4px 0; font-size: 1.1em;">✅ כתיבת פרק ממצאים וייעוץ בניתוח</p>
-<p style="margin: 4px 0; font-size: 1.1em;">✅ התאמה אישית לדרישות המרצה</p>
+<p style="margin: 4px 0; font-size: 1.1em;"> ✅  יצירת שאלונים דיגיטליים (Google Forms)</p>
+<p style="margin: 4px 0; font-size: 1.1em;"> ✅  אפיון לפי משתני המחקר + לוגיקת ניתוב</p>
+<p style="margin: 4px 0; font-size: 1.1em;"> ✅  ניתוחים סטטיסטיים ב-SPSS/Excel</p>
+<p style="margin: 4px 0; font-size: 1.1em;"> ✅  כתיבת פרק ממצאים וייעוץ בניתוח</p>
+<p style="margin: 4px 0; font-size: 1.1em;"> ✅  התאמה אישית לדרישות המרצה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 10px; font-size: 1.0em;">ליווי אישי אחד על אחד לאורך כל הדרך</p>
-<p style="color: var(--neon-blue); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.95em;">🎯 מתאים למחקר כמותני, איכותני או משולב</p>
+<p style="color: var(--neon-blue); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.95em;"> 🎯  מתאים למחקר כמותני, איכותני או משולב</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">🎯 מחירון סטטיסטיקה</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 🎯  מחירון סטטיסטיקה</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות המחקר, מספר משתנים וזמן הגשה</p>
 <div class="back-content">
-<div class="price-item">📋 שאלון דיגיטלי (עד 3 משתנים) 600 ₪</div>
-<div class="price-item">📊 שאלון + ניתוח + פרק ממצאים 1,400--1,800 ₪</div>
-<div class="price-item">📈 ניתוח סטטיסטי בלבד (SPSS) 450 ₪ לפלט בסיסי</div>
-<div class="price-item">📝 כתיבת פרק ממצאים בלבד 500 ₪</div>
+<div class="price-item"> 📋  שאלון דיגיטלי (עד 3 משתנים) 600 ₪</div>
+<div class="price-item"> 📊  שאלון + ניתוח + פרק ממצאים 1,400--1,800 ₪</div>
+<div class="price-item"> 📈  ניתוח סטטיסטי בלבד (SPSS) 450 ₪ לפלט בסיסי</div>
+<div class="price-item"> 📝  כתיבת פרק ממצאים בלבד 500 ₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="presentations">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-desktop"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;">🖥️ הכנת מצגות שמשדרות מקצועיות ומשיגות תוצאה</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;"> 🖥️  הכנת מצגות שמשדרות מקצועיות ומשיגות תוצאה</h3>
 <p style="font-size: 0.85em; margin-bottom: 8px;">מצגות מעוצבות, מדויקות ובעלות נוכחות -- שמדברות בשפה האקדמית ומביאות אותך מוכן ובטוח לרגע ההצגה.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">מתאים במיוחד למטלות סיום קורס, פרזנטציות סמינר, ימי עיון והגשות סופיות.</p>
 <div style="margin-top: 12px;">
-<p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.85em;">🎯 מה כולל השירות:</p>
+<p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.85em;"> 🎯  מה כולל השירות:</p>
 <div style="font-size: 0.75em; line-height: 1.1; text-align: right;">
-<p style="margin: 2px 0;">✅ עיצוב מצגת מקצועי לפי מבנה מחקר אקדמי</p>
-<p style="margin: 2px 0;">✅ שילוב גרפים, טבלאות והדגשות ויזואליות</p>
-<p style="margin: 2px 0;">✅ שכתוב תוכן והתאמה לניסוח ברור</p>
-<p style="margin: 2px 0;">✅ הכנת דפי דובר וליווי לניסוח בעל פה</p>
+<p style="margin: 2px 0;"> ✅  עיצוב מצגת מקצועי לפי מבנה מחקר אקדמי</p>
+<p style="margin: 2px 0;"> ✅  שילוב גרפים, טבלאות והדגשות ויזואליות</p>
+<p style="margin: 2px 0;"> ✅  שכתוב תוכן והתאמה לניסוח ברור</p>
+<p style="margin: 2px 0;"> ✅  הכנת דפי דובר וליווי לניסוח בעל פה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.75em; line-height: 1.2;">סגנון נקי, מותאם אישית, ומכוון להעברת מסר ברור</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון מצגות</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון מצגות</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות בהתאם להיקף והמורכבות של העבודה.</p>
 <div class="back-content">
-<div class="price-item">🎨 70 ₪ לשקופית (עד 10 שקופיות)</div>
+<div class="price-item"> 🎨  70 ₪ לשקופית (עד 10 שקופיות)</div>
 <div class="price-item">• שכתוב תוכן -- 20 ₪ לשקופית</div>
 <div class="price-item">• Speaker Notes -- 15 ₪ לשקופית</div>
 <div class="price-item">• הכנה להצגה חיה -- כולל חלוקת דיבור: 500 ₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="transcription">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-microphone"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">🎥 תמלול + סיכום הרצאות וראיונות</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 🎥  תמלול + סיכום הרצאות וראיונות</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">תמלול מקצועי + סיכום ברור של כל תוכן מוקלט -- הרצאות, ראיונות, Zoom, YouTube, Moodle, TED.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.9em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.8em; line-height: 1.2; text-align: right;">
-<p style="margin: 2px 0;">🎧 תמלול מדויק של קבצי וידאו או אודיו</p>
-<p style="margin: 1px 0;">📝 סיכום מובנה לפי נושאים ומושגים</p>
-<p style="margin: 1px 0;">🗂️ חלוקה בין דוברים בראיונות</p>
-<p style="margin: 1px 0;">📄 קובץ Word/PDF + קובץ סיכום ללמידה</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.8em;">⏱️ אפשרות לדחיפות -- תוך 48 שעות</p>
+<p style="margin: 2px 0;"> 🎧  תמלול מדויק של קבצי וידאו או אודיו</p>
+<p style="margin: 1px 0;"> 📝  סיכום מובנה לפי נושאים ומושגים</p>
+<p style="margin: 1px 0;"> 🗂️  חלוקה בין דוברים בראיונות</p>
+<p style="margin: 1px 0;"> 📄  קובץ Word/PDF + קובץ סיכום ללמידה</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.8em;"> ⏱️  אפשרות לדחיפות -- תוך 48 שעות</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון תמלול</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון תמלול</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">מחירים לפי אורך ההקלטה ומורכבות</p>
 <div class="back-content">
-<div class="price-item">🎧 עד 30 דק': תמלול 150₪ | סיכום 150₪</div>
-<div class="price-item">📝 עד 30 דק': תמלול + סיכום 200₪ 🔥</div>
-<div class="price-item">📊 עד 60 דק': תמלול + סיכום 300₪</div>
-<div class="price-item">⚡ דחיפות (48 שעות) - תוספת 25%</div>
+<div class="price-item"> 🎧  עד 30 דק': תמלול 150₪ | סיכום 150₪</div>
+<div class="price-item"> 📝  עד 30 דק': תמלול + סיכום 200₪  🔥 </div>
+<div class="price-item"> 📊  עד 60 דק': תמלול + סיכום 300₪</div>
+<div class="price-item"> ⚡  דחיפות (48 שעות) - תוספת 25%</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="editing">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-user-tie"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">🧑‍💼 קורות חיים מותאמים לפרקטיקום או תחילת קריירה</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 🧑‍💼  קורות חיים מותאמים לפרקטיקום או תחילת קריירה</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">סיימתם תואר? יוצאים לפרקטיקום? הגיע הזמן להציג את עצמכם כמו שצריך.</p>
 <p style="font-size: 0.8em; margin-bottom: 8px;">נכין עבורכם קורות חיים מקצועיים ומרשימים, בעברית או באנגלית, מותאמים אישית למסלול הלימודים, לתחום העיסוק ולשלב שבו אתם נמצאים.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">מה כולל השירות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;">✅ כתיבה מקצועית של קורות חיים – מאפס או שדרוג למסמך קיים</p>
-<p style="margin: 1px 0;">✅ התאמה לפרקטיקום, התמחות או משרה ראשונה בתחום הלימודים</p>
-<p style="margin: 1px 0;">✅ שילוב נכון של ניסיון לימודי, כישורים רלוונטיים ויתרונות אישיים</p>
-<p style="margin: 1px 0;">✅ עיצוב נקי ויזואלית – כולל גרסה עם תמונה לבחירה</p>
-<p style="margin: 1px 0;">✅ אפשרות לגרסה באנגלית או בעברית</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">🎯 קובץ מוכן לשליחה בלחיצת כפתור</p>
+<p style="margin: 1px 0;"> ✅  כתיבה מקצועית של קורות חיים – מאפס או שדרוג למסמך קיים</p>
+<p style="margin: 1px 0;"> ✅  התאמה לפרקטיקום, התמחות או משרה ראשונה בתחום הלימודים</p>
+<p style="margin: 1px 0;"> ✅  שילוב נכון של ניסיון לימודי, כישורים רלוונטיים ויתרונות אישיים</p>
+<p style="margin: 1px 0;"> ✅  עיצוב נקי ויזואלית – כולל גרסה עם תמונה לבחירה</p>
+<p style="margin: 1px 0;"> ✅  אפשרות לגרסה באנגלית או בעברית</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  קובץ מוכן לשליחה בלחיצת כפתור</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחיר:</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחיר:</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות והיקף הפרויקט</p>
 <div class="back-content">
-<div class="price-item">🇮🇱 עברית בלבד: 350 ₪</div>
-<div class="price-item">🇺🇸 אנגלית בלבד: 450 ₪</div>
-<div class="price-item">🌐 דו‑לשוני: 600 ₪</div>
-<div class="price-item">🔄 שדרוג קיים: 200 ₪</div>
+<div class="price-item"> 🇮🇱  עברית בלבד: 350 ₪</div>
+<div class="price-item"> 🇺🇸  אנגלית בלבד: 450 ₪</div>
+<div class="price-item"> 🌐  דו לשוני: 600 ₪</div>
+<div class="price-item"> 🔄  שדרוג קיים: 200 ₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="tutoring">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-user-graduate"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">💻 סיוע במבחנים אונליין</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 💻  סיוע במבחנים אונליין</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">הכנה וליווי למבחנים מקוונים בזמן אמת</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;">✅ מותאם אישית לפי תחום וסוג הבחינה</p>
-<p style="margin: 1px 0;">✅ זמינות מלאה בזמן אמת -- על פי תיאום</p>
-<p style="margin: 1px 0;">✅ כולל הדגמות, פתרון תרגילים וסימולציות</p>
-<p style="margin: 1px 0;">✅ מתבצע באופן דיסקרטי ומקצועי</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">🎯 ליווי במערכות Zoom, Moodle ופורטלים</p>
+<p style="margin: 1px 0;"> ✅  מותאם אישית לפי תחום וסוג הבחינה</p>
+<p style="margin: 1px 0;"> ✅  זמינות מלאה בזמן אמת -- על פי תיאום</p>
+<p style="margin: 1px 0;"> ✅  כולל הדגמות, פתרון תרגילים וסימולציות</p>
+<p style="margin: 1px 0;"> ✅  מתבצע באופן דיסקרטי ומקצועי</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  ליווי במערכות Zoom, Moodle ופורטלים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון סיוע מבחנים</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון סיוע מבחנים</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות המבחן וזמן ההיערכות</p>
 <div class="back-content">
-<div class="price-item">💻 הכנה למבחן מקוון - 300₪</div>
-<div class="price-item">🎯 ליווי בזמן אמת (60 דק') - 400₪</div>
-<div class="price-item">📚 הכנה + ליווי (חבילה) - 600₪</div>
-<div class="price-item">⚡ סימולציה מוקדמת - 200₪</div>
+<div class="price-item"> 💻  הכנה למבחן מקוון - 300₪</div>
+<div class="price-item"> 🎯  ליווי בזמן אמת (60 דק') - 400₪</div>
+<div class="price-item"> 📚  הכנה + ליווי (חבילה) - 600₪</div>
+<div class="price-item"> ⚡  סימולציה מוקדמת - 200₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="research">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-search"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">🔍 חיפוש וניתוח מידע אקדמי</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 🔍  חיפוש וניתוח מידע אקדמי</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">איתור, סינון וניתוח של מקורות רלוונטיים -- מאמרים, ספרים, פסקי דין וחומרים עיוניים -- לצורך כתיבת סקירת ספרות או בניית מסד ידע איכותי.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">השירות מותאם במיוחד לעבודות סמינריוניות, תזות, פרויקטים ומטלות עיוניות.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;">✅ איתור מקורות אקדמיים איכותיים ומעודכנים</p>
-<p style="margin: 1px 0;">✅ סינון וארגון המידע לפי נושאים או שאלות מחקר</p>
-<p style="margin: 1px 0;">✅ כתיבה מקצועית של סקירת ספרות</p>
-<p style="margin: 1px 0;">✅ הכנת ביבליוגרפיה לפי כללי APA או דרישת המרצה</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">🎯 גישה למאגרי מידע אקדמיים</p>
+<p style="margin: 1px 0;"> ✅  איתור מקורות אקדמיים איכותיים ומעודכנים</p>
+<p style="margin: 1px 0;"> ✅  סינון וארגון המידע לפי נושאים או שאלות מחקר</p>
+<p style="margin: 1px 0;"> ✅  כתיבה מקצועית של סקירת ספרות</p>
+<p style="margin: 1px 0;"> ✅  הכנת ביבליוגרפיה לפי כללי APA או דרישת המרצה</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  גישה למאגרי מידע אקדמיים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי היקף המחקר ומורכבותו</p>
 <div class="back-content">
 <div class="price-item">איתור מקורות (עד 10) - 70₪</div>
@@ -2248,71 +2138,68 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="consulting">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-headphones"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">🎧 יצירת פודקאסטים לימודיים בהתאמה אישית</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 🎧  יצירת פודקאסטים לימודיים בהתאמה אישית</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">המר את הסיכומים, המצגות או עיקרי ההרצאה שלך לקובץ שמע ברור ונעים -- כדי שתוכל ללמוד בדרך, באוזניות, בכל זמן ובכל מקום.</p>
-<p style="margin-top: 8px; color: var(--neon-green); font-size: 0.8em; line-height: 1.2;">פתרון מושלם למי שמעדיף להקשיב במקום לקרוא 📱<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span></p>
+<p style="margin-top: 8px; color: var(--neon-green); font-size: 0.8em; line-height: 1.2;">פתרון מושלם למי שמעדיף להקשיב במקום לקרוא  📱🎧 </p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;">✅ הפקה של קובץ שמע (MP3) באיכות גבוהה</p>
-<p style="margin: 1px 0;">✅ קריינות אנושית ברורה ומקצועית</p>
-<p style="margin: 1px 0;">✅ תיאום סגנון לפי מטרה -- חזרה או הצגה</p>
-<p style="margin: 1px 0;">✅ מתאים לסיכומים, הרצאות ומצגות</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">🎯 מושלם ללמידה תוך כדי תנועה: בנסיעה או בהליכה</p>
+<p style="margin: 1px 0;"> ✅  הפקה של קובץ שמע (MP3) באיכות גבוהה</p>
+<p style="margin: 1px 0;"> ✅  קריינות אנושית ברורה ומקצועית</p>
+<p style="margin: 1px 0;"> ✅  תיאום סגנון לפי מטרה -- חזרה או הצגה</p>
+<p style="margin: 1px 0;"> ✅  מתאים לסיכומים, הרצאות ומצגות</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  מושלם ללמידה תוך כדי תנועה: בנסיעה או בהליכה</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון פודקאסטים</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון פודקאסטים</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי אורך התוכן ומורכבות הקריינות</p>
 <div class="back-content">
-<div class="price-item">🎧 קובץ שמע קצר (עד 10 דק') - 180₪</div>
-<div class="price-item">📱 קובץ שמע בינוני (עד 30 דק') - 350₪</div>
-<div class="price-item"><span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> קובץ שמע ארוך (עד 60 דק') - 500₪</div>
-<div class="price-item">🎯 פיצול לפרקים + הדגשות - 250₪</div>
+<div class="price-item"> 🎧  קובץ שמע קצר (עד 10 דק') - 180₪</div>
+<div class="price-item"> 📱  קובץ שמע בינוני (עד 30 דק') - 350₪</div>
+<div class="price-item"> 🎧  קובץ שמע ארוך (עד 60 דק') - 500₪</div>
+<div class="price-item"> 🎯  פיצול לפרקים + הדגשות - 250₪</div>
 </div>
 </div>
 </div>
-
 <div class="service-card" data-card="translation">
 <div class="service-front">
 <div class="service-icon">
 <i class="fas fa-language"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;">🌐 תרגום מקצועי ומותאם לעולם האקדמיה</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;"> 🌐  תרגום מקצועי ומותאם לעולם האקדמיה</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">תרגום עבודות אקדמיות, מאמרים ומקורות מאנגלית לעברית ולהפך -- בהבנה מלאה של המונחים האקדמיים והתחום</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;">✅ תרגום עבודות סמינריוניות ותזות</p>
-<p style="margin: 1px 0;">✅ תרגום מאמרים מחקריים ומקורות</p>
-<p style="margin: 1px 0;">✅ תרגום תקצירים ומבואות</p>
-<p style="margin: 1px 0;">✅ התאמה לטרמינולוגיה האקדמית</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">🎯 מתמחים בתחומי מדעי הרוח, החברה והמשפטים</p>
+<p style="margin: 1px 0;"> ✅  תרגום עבודות סמינריוניות ותזות</p>
+<p style="margin: 1px 0;"> ✅  תרגום מאמרים מחקריים ומקורות</p>
+<p style="margin: 1px 0;"> ✅  תרגום תקצירים ומבואות</p>
+<p style="margin: 1px 0;"> ✅  התאמה לטרמינולוגיה האקדמית</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  מתמחים בתחומי מדעי הרוח, החברה והמשפטים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;">💰 מחירון תרגום</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון תרגום</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים לפי מספר מילים ומורכבות הטקסט</p>
 <div class="back-content">
-<div class="price-item">📝 תרגום רגיל - 0.8₪ למילה</div>
-<div class="price-item"><span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> תרגום אקדמי מתקדם - 1.2₪ למילה</div>
-<div class="price-item">📚 תרגום מחקרי מורכב - 1.5₪ למילה</div>
-<div class="price-item">⚡ דחיפות (24 שעות) - תוספת 50%</div>
+<div class="price-item"> 📝  תרגום רגיל - 0.8₪ למילה</div>
+<div class="price-item"> 🎓  תרגום אקדמי מתקדם - 1.2₪ למילה</div>
+<div class="price-item"> 📚  תרגום מחקרי מורכב - 1.5₪ למילה</div>
+<div class="price-item"> ⚡  דחיפות (24 שעות) - תוספת 50%</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-
 <section class="cta">
 <div class="cta-content">
 <div class="cta-urgency">
@@ -2326,7 +2213,7 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 בלי הלחץ, בלי החרדה ובלי הכאב הנפשי.
 </p>
 <div class="cta-buttons">
-<a class="btn btn-primary" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת לקבל עזרה אקדמית" target="_blank">
+<a class="btn btn-primary" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת בעזרה אקדמית" target="_blank">
 <i class="fab fa-whatsapp"></i>
 בואו נתחיל - WhatsApp
 </a>
@@ -2338,8 +2225,6 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </section>
 </div>
-
-<!-- Footer -->
 <footer class="footer">
 <div class="container">
 <div class="footer-content">
@@ -2351,8 +2236,47 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 </div>
 </div>
 </footer>
-
 <script>
+// Testimonials Carousel - Simple and Working Version
+let slideIndex = 1;
+function changeTestimonial(direction) {
+slideIndex += direction;
+if (slideIndex > 6) slideIndex = 1;
+if (slideIndex < 1) slideIndex = 6;
+showSlide(slideIndex);
+}
+function currentSlide(n) {
+slideIndex = n;
+showSlide(slideIndex);
+}
+function showSlide(n) {
+const slides = document.querySelectorAll('.testimonial-slide');
+const dots = document.querySelectorAll('.dot');
+// Hide all slides
+slides.forEach(slide => {
+slide.classList.remove('active');
+slide.style.opacity = '0';
+slide.style.transform = 'translateX(100%)';
+});
+// Remove active from all dots
+dots.forEach(dot => dot.classList.remove('active'));
+// Show current slide
+if (slides[n-1]) {
+slides[n-1].classList.add('active');
+slides[n-1].style.opacity = '1';
+slides[n-1].style.transform = 'translateX(0)';
+}
+// Activate current dot
+if (dots[n-1]) {
+dots[n-1].classList.add('active');
+}
+}
+// Initialize carousel
+document.addEventListener('DOMContentLoaded', function() {
+showSlide(1);
+// Auto advance every 5 seconds
+setInterval(() => changeTestimonial(1), 5000);
+});
 // Service card flip functionality
 document.addEventListener('DOMContentLoaded', function() {
 const serviceCards = document.querySelectorAll('.service-card');
@@ -2361,13 +2285,11 @@ card.addEventListener('click', function() {
 this.classList.toggle('is-flipped');
 });
 });
-
 // Counter animation functionality
 const observerOptions = {
 threshold: 0.5,
 rootMargin: '0px 0px -100px 0px'
 };
-
 const counterObserver = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
@@ -2379,30 +2301,24 @@ counterObserver.unobserve(entry.target);
 }
 });
 }, observerOptions);
-
 // Observe stats section
 const statsSection = document.querySelector('.stats-section');
 if (statsSection) {
 counterObserver.observe(statsSection);
 }
-
 function animateCounter(element) {
 const target = parseInt(element.getAttribute('data-target'));
 const duration = 2000; // 2 seconds
 const start = performance.now();
 const startValue = 0;
-
 function updateCounter(currentTime) {
 const elapsed = currentTime - start;
 const progress = Math.min(elapsed / duration, 1);
-
 // Easing function for smooth animation
 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
 const current = Math.floor(startValue + (target - startValue) * easeOutQuart);
-
 element.textContent = current.toLocaleString();
 element.classList.add('counting');
-
 if (progress < 1) {
 requestAnimationFrame(updateCounter);
 } else {
@@ -2412,134 +2328,6 @@ element.classList.remove('counting');
 }
 requestAnimationFrame(updateCounter);
 }
-
-// Rocket popup functionality with better error handling
-document.addEventListener('DOMContentLoaded', function() {
-const rocketBtn = document.getElementById("rocketBtn");
-const rocketPopup = document.getElementById("rocketPopup");
-const rocketClose = document.getElementById("rocketClose");
-const quickOrderForm = document.getElementById("quickOrderForm");
-
-console.log('Rocket elements:', { rocketBtn, rocketPopup, rocketClose, quickOrderForm });
-
-if (rocketBtn && rocketPopup && rocketClose && quickOrderForm) {
-// Show/hide popup
-rocketBtn.addEventListener("click", (e) => {
-e.stopPropagation();
-console.log('Rocket button clicked');
-const isVisible = rocketPopup.style.display === "block";
-rocketPopup.style.display = isVisible ? "none" : "block";
-});
-
-// Close popup
-rocketClose.addEventListener("click", (e) => {
-e.stopPropagation();
-console.log('Close button clicked');
-rocketPopup.style.display = "none";
-});
-
-// Close popup when clicking outside
-document.addEventListener("click", (e) => {
-if (!rocketPopup.contains(e.target) && !rocketBtn.contains(e.target)) {
-rocketPopup.style.display = "none";
-}
-});
-
-// Handle form submission
-quickOrderForm.addEventListener("submit", (e) => {
-e.preventDefault();
-console.log('Form submitted');
-
-try {
-// Get form data
-const customerName = document.getElementById("customerName").value.trim();
-const serviceType = document.getElementById("serviceType").value;
-const urgencyLevel = document.getElementById("urgencyLevel").value;
-const customerPhone = document.getElementById("customerPhone").value.trim();
-const projectDescription = document.getElementById("projectDescription").value.trim();
-
-// Validate required fields
-if (!customerName || !serviceType || !urgencyLevel || !customerPhone || !projectDescription) {
-alert('אנא מלא את כל השדות הנדרשים');
-return;
-}
-
-// Create WhatsApp message
-const message = `<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">☝️</span> *הזמנה חדשה - מ.א עזרה אקדמית*
-
-👤 *שם הלקוח:* ${customerName}
-📱 *טלפון:* ${customerPhone}
-🛠️ *סוג שירות:* ${serviceType}
-⏰ *רמת דחיפות:* ${urgencyLevel}
-
-📝 *תיאור הפרויקט:*
-${projectDescription}
-
----
-⚡ הזמנה נשלחה דרך הזמנה מהירה באתר`;
-
-// Encode message for WhatsApp
-const encodedMessage = encodeURIComponent(message);
-const whatsappURL = `https://wa.me/972532829226?text=${encodedMessage}`;
-
-console.log('Opening WhatsApp with message:', message);
-
-// Open WhatsApp
-window.open(whatsappURL, '_blank');
-
-// Close popup and reset form
-rocketPopup.style.display = "none";
-quickOrderForm.reset();
-
-// Show success message
-showSuccessMessage();
-
-} catch (error) {
-console.error('Error in form submission:', error);
-alert('אירעה שגיאה בשליחת הטופס. אנא נסה שוב.');
-}
-});
-
-} else {
-console.error('Some rocket popup elements not found:', {
-rocketBtn: !!rocketBtn,
-rocketPopup: !!rocketPopup,
-rocketClose: !!rocketClose,
-quickOrderForm: !!quickOrderForm
-});
-}
-});
-
-// Success message function
-function showSuccessMessage() {
-const successMsg = document.createElement('div');
-successMsg.innerHTML = `
-<div style="
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-color: white;
-padding: 20px 30px;
-border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-z-index: 9999;
-text-align: center;
-font-weight: 600;
-">
-✅ ההזמנה נשלחה בהצלחה!<br>
-תועברו לווטסאפ כדי לשלוח את הפרטים
-</div>
-`;
-document.body.appendChild(successMsg);
-
-setTimeout(() => {
-document.body.removeChild(successMsg);
-}, 3000);
-}
-});
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function (e) {
@@ -2553,7 +2341,6 @@ block: 'start'
 }
 });
 });
-
 // Add some interactive effects
 document.addEventListener('DOMContentLoaded', function() {
 // Add hover effect to problem cards
@@ -2566,7 +2353,6 @@ card.addEventListener('mouseleave', function() {
 this.style.transform = 'scale(1) rotateY(0deg)';
 });
 });
-
 // Add click effect to buttons
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
@@ -2577,21 +2363,17 @@ const rect = this.getBoundingClientRect();
 const size = Math.max(rect.width, rect.height);
 const x = e.clientX - rect.left - size / 2;
 const y = e.clientY - rect.top - size / 2;
-
 ripple.style.width = ripple.style.height = size + 'px';
 ripple.style.left = x + 'px';
 ripple.style.top = y + 'px';
 ripple.classList.add('ripple');
-
 this.appendChild(ripple);
-
 setTimeout(() => {
 ripple.remove();
 }, 600);
 });
 });
 });
-
 // Add CSS for ripple effect
 const style = document.createElement('style');
 style.textContent = `
@@ -2602,7 +2384,6 @@ background: rgba(255, 255, 255, 0.3);
 pointer-events: none;
 animation: ripple-animation 0.6s ease-out;
 }
-
 @keyframes ripple-animation {
 0% {
 transform: scale(0);
@@ -2613,15 +2394,13 @@ transform: scale(1);
 opacity: 0;
 }
 }
-
 .counting {
 color: var(--neon-blue) !important;
 text-shadow: 0 0 20px rgba(0, 212, 255, 0.8) !important;
 }
 `;
 document.head.appendChild(style);
+});
 </script>
-
-
 </body>
 </html>
