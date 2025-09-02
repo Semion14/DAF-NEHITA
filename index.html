@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>מ.א עזרה אקדמית - תפסיקו להיחנק, תתחילו להצליח</title>
+<title>מהעומס להצלחה – אנחנו כאן בשבילכם | מ.א עזרה אקדמית</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
@@ -774,7 +774,7 @@ overflow: hidden;
 justify-self: center;
 }
 .service-card::after {
-content: ' 💰  לחץ למחירון';
+content: '  💰   לחץ למחירון';
 position: absolute;
 bottom: 15px;
 left: 50%;
@@ -796,7 +796,7 @@ opacity: 1;
 transform: translateX(-50%) scale(1.05);
 }
 .service-card.is-flipped::after {
-content: ' 👆  לחץ לחזרה';
+content: '  👆   לחץ לחזרה';
 background: rgba(79, 172, 254, 0.2);
 border-color: rgba(79, 172, 254, 0.4);
 color: var(--neon-blue);
@@ -933,7 +933,8 @@ margin-bottom: 20px;
 }
 /* קריאה לפעולה */
 .cta {
-background: var(--academic-gradient);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
 padding: 80px 60px;
 text-align: center;
 border-radius: 30px;
@@ -1028,6 +1029,16 @@ background: white;
 color: #4facfe;
 transform: translateY(-5px) scale(1.05);
 }
+.btn-facebook {
+background: #1877F2;
+color: white;
+box-shadow: 0 10px 30px rgba(24, 119, 242, 0.3);
+}
+.btn-facebook:hover {
+background: #166fe5;
+transform: translateY(-5px) scale(1.05);
+box-shadow: 0 20px 40px rgba(24, 119, 242, 0.4);
+}
 /* Footer */
 .footer {
 background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -1097,6 +1108,21 @@ height: 3px;
 background: var(--success-gradient);
 margin: 20px auto;
 border-radius: 2px;
+}
+.footer-social {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+.footer-social a {
+color: #1877F2;
+font-size: 1.8em;
+transition: transform 0.3s, color 0.3s;
+}
+.footer-social a:hover {
+color: #166fe5;
+transform: scale(1.2);
 }
 /* כפתורי פעולה צפים */
 .whatsapp-float {
@@ -1566,20 +1592,19 @@ bottom: -6px;
 font-size: 18px;
 }
 }
-
 /* ===== תיקון גלישת טקסט בכרטיסי שירות ===== */
 .service-front h3 {
-	font-size: 1.1em !important;
-	line-height: 1.3 !important;
+font-size: 1.1em !important;
+line-height: 1.3 !important;
 }
 .service-front p[style] {
-	font-size: 0.8em !important;
-	line-height: 1.4 !important;
-	margin: 4px 0 !important;
+font-size: 0.8em !important;
+line-height: 1.4 !important;
+margin: 4px 0 !important;
 }
 .service-front div[style] > p {
-	font-size: 0.85em !important;
-	line-height: 1.5 !important;
+font-size: 0.85em !important;
+line-height: 1.5 !important;
 }
 /* ============================================== */
 </style>
@@ -1588,11 +1613,11 @@ font-size: 18px;
 <div class="academic-bg"></div>
 <button class="rocket-float" style="position: fixed; width: 60px; height: 60px; bottom: 100px; left: 25px; background: #ff3b3b; color: white; border-radius: 50%; border: none; cursor: pointer; z-index: 9999; font-size: 24px;"
 onclick="document.getElementById('rocketPopup').style.display = document.getElementById('rocketPopup').style.display === 'block' ? 'none' : 'block';">
-<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer"> ☝️ </span>
+<span class="qoline1">הזמן</span><span class="qoline2">עכשיו</span><span class="hand-pointer">  ☝️  </span>
 </button>
 <div class="rocket-popup" id="rocketPopup" style="position: fixed; bottom: 180px; left: 20px; background: #1a1a2e; border: 2px solid #38bdf8; padding: 25px; border-radius: 20px; z-index: 9998; width: 320px; display: none; box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
 <form id="quickOrderForm" onsubmit="handleFormSubmit(event)">
-<h3 style="color: #38bdf8; margin-bottom: 20px; text-align: center;"> 🚀  הזמנה מהירה</h3>
+<h3 style="color: #38bdf8; margin-bottom: 20px; text-align: center;">  🚀   הזמנה מהירה</h3>
 <input id="customerName" placeholder="שם מלא" required type="text" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
 <select id="serviceType" required style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;">
 <option value="">סוג שירות</option>
@@ -1617,8 +1642,8 @@ onclick="document.getElementById('rocketPopup').style.display = document.getElem
 <input id="customerPhone" placeholder="050-1234567" required type="tel" style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff;"/>
 <textarea id="projectDescription" placeholder="תיאור קצר של הפרויקט והדרישות" rows="3" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #38bdf8; background: rgba(255, 255, 255, 0.1); color: #fff; resize: vertical;"></textarea>
 <div style="display: flex; justify-content: space-between; align-items: center;">
-<button type="button" onclick="document.getElementById('rocketPopup').style.display = 'none'" style="background: rgba(248, 113, 113, 0.2); color: #f87171; border: none; padding: 10px; border-radius: 8px; cursor: pointer;"> ❌ </button>
-<button type="submit" style="background: #25d366; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">שלח הזמנה  📤 </button>
+<button type="button" onclick="document.getElementById('rocketPopup').style.display = 'none'" style="background: rgba(248, 113, 113, 0.2); color: #f87171; border: none; padding: 10px; border-radius: 8px; cursor: pointer;">  ❌  </button>
+<button type="submit" style="background: #25d366; color: white; border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer;">שלח הזמנה   📤  </button>
 </div>
 </form>
 </div>
@@ -1638,15 +1663,15 @@ alert('אנא מלא את כל השדות הנדרשים');
 return;
 }
 // Create WhatsApp message
-const message = ` 🚀  *הזמנה חדשה - מ.א עזרה אקדמית*
-👤  *שם הלקוח:* ${customerName}
-📱  *טלפון:* ${customerPhone}
-🛠️  *סוג שירות:* ${serviceType}
-⏰  *רמת דחיפות:* ${urgencyLevel}
-📝  *תיאור הפרויקט:*
+const message = `  🚀   *הזמנה חדשה - מ.א עזרה אקדמית*
+👤   *שם הלקוח:* ${customerName}
+📱   *טלפון:* ${customerPhone}
+🛠️   *סוג שירות:* ${serviceType}
+⏰   *רמת דחיפות:* ${urgencyLevel}
+📝   *תיאור הפרויקט:*
 ${projectDescription}
 ---
-⚡  הזמנה נשלחה דרך הזמנה מהירה באתר`;
+⚡   הזמנה נשלחה דרך הזמנה מהירה באתר`;
 // Encode message for WhatsApp
 const encodedMessage = encodeURIComponent(message);
 const whatsappURL = `https://wa.me/972532829226?text=${encodedMessage}`;
@@ -1657,7 +1682,7 @@ document.getElementById('rocketPopup').style.display = 'none';
 document.getElementById('quickOrderForm').reset();
 // Show success message
 const successMsg = document.createElement('div');
-successMsg.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-align: center; font-weight: 600;"> ✅  ההזמנה נשלחה בהצלחה!<br>תועברו לווטסאפ כדי לשלוח את הפרטים</div>`;
+successMsg.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-align: center; font-weight: 600;">  ✅   ההזמנה נשלחה בהצלחה!<br>תועברו לווטסאפ כדי לשלוח את הפרטים</div>`;
 document.body.appendChild(successMsg);
 setTimeout(() => document.body.removeChild(successMsg), 3000);
 }
@@ -1668,14 +1693,21 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <header>
 <div class="container">
 <div class="hero">
-<div class="stress-badge">
-<i class="fas fa-exclamation-triangle"></i>
-מרגישים שהעומס האקדמי חונק אתכם?
-</div>
-<h1>מ.א עזרה אקדמית</h1>
-<p class="hero-subtitle">העומס לא חייב לנהל אתכם -- הגיע הזמן שתיקחו שליטה על ההצלחה שלכם באקדמיה.</p>
-<div class="relief-promise">
-אנחנו כאן כדי להקל, ללוות, ולפנות לכם זמן למה שחשוב באמת
+  <div class="stress-badge">
+    🎓עזרה מיידית עד ההצלחה🎓
+  </div>
+
+  <!-- כותרת ראשית עם שם העסק -->
+  <h1 class="brand-title">מ.א עזרה אקדמית</h1>
+
+  <!-- תת-כותרת -->
+  <h2 class="hero-subtitle">
+    מהעומס להצלחה – אנחנו כאן בשבילכם
+  </h2>
+
+  <p class="hero-text">
+    מורידים את הלחץ, מסדרים את העבודה ומביאים אתכם לתוצאה – בזמן ובסטנדרט של המרצה.
+  </p>
 </div>
 <div class="stress-stats">
 <div class="stress-stat">
@@ -1691,7 +1723,7 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="stress-label">הצלחה מובטחת בעבודות</div>
 </div>
 <div class="stress-stat">
-<div class="stress-number"> 🔒 </div>
+<div class="stress-number">  🔒  </div>
 <div class="stress-label">סודיות ודיסקרטיות מוחלטת</div>
 </div>
 </div>
@@ -1933,28 +1965,28 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-pen-fancy"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;"> ✍️  כתיבה מקצועית של עבודות אקדמיות</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;">  ✍️   כתיבה מקצועית של עבודות אקדמיות</h3>
 <p style="font-size: 0.85em; margin-bottom: 10px; font-weight: 600;">עבודות מקוריות ב־100%, מותאמות לקורס, להנחיות המרצה ולמבנה האקדמי הנדרש.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">מתאים לכל שלב בתואר ולכל תחום במדעי הרוח, החברה, החינוך, המשפטים ועוד...</p>
 <div style="margin-top: 12px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 10px; font-size: 1.2em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 1.1em; line-height: 1.4; text-align: right;">
-<p style="margin: 5px 0; font-size: 1.15em;"> ✅📝  מטלת אמצע / סוף קורס</p>
-<p style="margin: 4px 0; font-size: 1.15em;"> ✅📄  פרו־סמינריון בסיסי או מורחב</p>
-<p style="margin: 4px 0; font-size: 1.15em;"> ✅📊  סמינריון אמפירי -- כמותני / איכותני</p>
-<p style="margin: 4px 0; font-size: 1.15em;"> ✅🎓  עבודת גמר / תזה</p>
+<p style="margin: 5px 0; font-size: 1.15em;">  ✅📝   מטלת אמצע / סוף קורס</p>
+<p style="margin: 4px 0; font-size: 1.15em;">  ✅📄   פרו־סמינריון בסיסי או מורחב</p>
+<p style="margin: 4px 0; font-size: 1.15em;">  ✅📊   סמינריון אמפירי -- כמותני / איכותני</p>
+<p style="margin: 4px 0; font-size: 1.15em;">  ✅🎓   עבודת גמר / תזה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 12px; font-size: 1.05em; line-height: 1.4;">וכל עבודה אחרת שתצטרכו -- לפי דרישה והתאמה אישית</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון כתיבה</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון כתיבה</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי היקף, מורכבות ודחיפות ההגשה</p>
 <div class="back-content">
-<div class="price-item"> 📝  מטלת אמצע/סוף (עד-5 עמ') 450/350 ₪</div>
-<div class="price-item"> 📄  פרו־סמינריון בסיסי/מורחב (עד-10 עמ') 1,800/1,200 ₪</div>
-<div class="price-item"> 📊  סמינריון אמפירי/כמותני (עד-10 עמ') 2,900 ₪</div>
-<div class="price-item"> 🎓  עבודת גמר/תזה (עד-35 עמ') 5,500 ₪</div>
+<div class="price-item">📝 מטלת אמצע/סוף (עד-5 עמ') — 500 ₪</div>
+<div class="price-item">📄 פרו־סמינריון בסיסי/מורחב (עד-10 עמ') — 1,600/2,000 ₪</div>
+<div class="price-item">📊 סמינריון אמפירי/כמותני (עד-10 עמ') — 3,400 ₪</div>
+<div class="price-item">🎓 עבודת גמר/תזה (עד-30 עמ') — 5,500 ₪</div>
 </div>
 </div>
 </div>
@@ -1963,29 +1995,29 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-chart-bar"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;"> 📊  ניתוחים סטטיסטיים + בניית שאלונים</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;">  📊   ניתוחים סטטיסטיים + בניית שאלונים</h3>
 <p style="font-size: 0.85em; margin-bottom: 10px; font-weight: 600;">שירות שלם ולגיטימי לסטודנטים, חוקרים ועבודות סמינר/גמר.</p>
 <div style="margin-top: 10px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 8px; font-size: 1.1em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 1.0em; line-height: 1.3; text-align: right;">
-<p style="margin: 4px 0; font-size: 1.1em;"> ✅  יצירת שאלונים דיגיטליים (Google Forms)</p>
-<p style="margin: 4px 0; font-size: 1.1em;"> ✅  אפיון לפי משתני המחקר + לוגיקת ניתוב</p>
-<p style="margin: 4px 0; font-size: 1.1em;"> ✅  ניתוחים סטטיסטיים ב-SPSS/Excel</p>
-<p style="margin: 4px 0; font-size: 1.1em;"> ✅  כתיבת פרק ממצאים וייעוץ בניתוח</p>
-<p style="margin: 4px 0; font-size: 1.1em;"> ✅  התאמה אישית לדרישות המרצה</p>
+<p style="margin: 4px 0; font-size: 1.1em;">  ✅   יצירת שאלונים דיגיטליים (Google Forms)</p>
+<p style="margin: 4px 0; font-size: 1.1em;">  ✅   אפיון לפי משתני המחקר + לוגיקת ניתוב</p>
+<p style="margin: 4px 0; font-size: 1.1em;">  ✅   ניתוחים סטטיסטיים ב-SPSS/Excel</p>
+<p style="margin: 4px 0; font-size: 1.1em;">  ✅   כתיבת פרק ממצאים וייעוץ בניתוח</p>
+<p style="margin: 4px 0; font-size: 1.1em;">  ✅   התאמה אישית לדרישות המרצה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 10px; font-size: 1.0em;">ליווי אישי אחד על אחד לאורך כל הדרך</p>
-<p style="color: var(--neon-blue); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.95em;"> 🎯  מתאים למחקר כמותני, איכותני או משולב</p>
+<p style="color: var(--neon-blue); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.95em;">  🎯   מתאים למחקר כמותני, איכותני או משולב</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 🎯  מחירון סטטיסטיקה</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  🎯   מחירון סטטיסטיקה</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות המחקר, מספר משתנים וזמן הגשה</p>
 <div class="back-content">
-<div class="price-item"> 📋  שאלון דיגיטלי (עד 3 משתנים) 600 ₪</div>
-<div class="price-item"> 📊  שאלון + ניתוח + פרק ממצאים 1,400--1,800 ₪</div>
-<div class="price-item"> 📈  ניתוח סטטיסטי בלבד (SPSS) 450 ₪ לפלט בסיסי</div>
-<div class="price-item"> 📝  כתיבת פרק ממצאים בלבד 500 ₪</div>
+<div class="price-item">📋 שאלון דיגיטלי (משתנה אחד) — 250 ₪</div>
+<div class="price-item">📚 שאלון + ניתוח + פרק ממצאים — 1,500–2,100 ₪</div>
+<div class="price-item">📈 ניתוח סטטיסטי בלבד (SPSS) — 500 ₪ לפלט בסיסי</div>
+<div class="price-item">📝 כתיבת פרק ממצאים בלבד — 700 ₪</div>
 </div>
 </div>
 </div>
@@ -1994,28 +2026,28 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-desktop"></i>
 </div>
-<h3 style="font-size: 1.05em; margin-bottom: 10px;"> 🖥️  הכנת מצגות שמשדרות מקצועיות ומשיגות תוצאה</h3>
+<h3 style="font-size: 1.05em; margin-bottom: 10px;">  🖥️   הכנת מצגות שמשדרות מקצועיות ומשיגות תוצאה</h3>
 <p style="font-size: 0.85em; margin-bottom: 8px;">מצגות מעוצבות, מדויקות ובעלות נוכחות -- שמדברות בשפה האקדמית ומביאות אותך מוכן ובטוח לרגע ההצגה.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">מתאים במיוחד למטלות סיום קורס, פרזנטציות סמינר, ימי עיון והגשות סופיות.</p>
 <div style="margin-top: 12px;">
-<p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.85em;"> 🎯  מה כולל השירות:</p>
+<p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.85em;">  🎯   מה כולל השירות:</p>
 <div style="font-size: 0.75em; line-height: 1.1; text-align: right;">
-<p style="margin: 2px 0;"> ✅  עיצוב מצגת מקצועי לפי מבנה מחקר אקדמי</p>
-<p style="margin: 2px 0;"> ✅  שילוב גרפים, טבלאות והדגשות ויזואליות</p>
-<p style="margin: 2px 0;"> ✅  שכתוב תוכן והתאמה לניסוח ברור</p>
-<p style="margin: 2px 0;"> ✅  הכנת דפי דובר וליווי לניסוח בעל פה</p>
+<p style="margin: 2px 0;">  ✅   עיצוב מצגת מקצועי לפי מבנה מחקר אקדמי</p>
+<p style="margin: 2px 0;">  ✅   שילוב גרפים, טבלאות והדגשות ויזואליות</p>
+<p style="margin: 2px 0;">  ✅   שכתוב תוכן והתאמה לניסוח ברור</p>
+<p style="margin: 2px 0;">  ✅   הכנת דפי דובר וליווי לניסוח בעל פה</p>
 <p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.75em; line-height: 1.2;">סגנון נקי, מותאם אישית, ומכוון להעברת מסר ברור</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון מצגות</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון מצגות</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות בהתאם להיקף והמורכבות של העבודה.</p>
 <div class="back-content">
-<div class="price-item"> 🎨  70 ₪ לשקופית (עד 10 שקופיות)</div>
-<div class="price-item">• שכתוב תוכן -- 20 ₪ לשקופית</div>
-<div class="price-item">• Speaker Notes -- 15 ₪ לשקופית</div>
-<div class="price-item">• הכנה להצגה חיה -- כולל חלוקת דיבור: 500 ₪</div>
+<div class="price-item">🖼️ 150 ₪ לשקופית</div>
+<div class="price-item">• שכתוב תוכן — 25 ₪ לשקופית</div>
+<div class="price-item">• Speaker Notes — 20 ₪ לשקופית</div>
+<div class="price-item">• הכנה להצגה חיה — כולל חלוקת דיבור: 750 ₪</div>
 </div>
 </div>
 </div>
@@ -2024,27 +2056,27 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-microphone"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 🎥  תמלול + סיכום הרצאות וראיונות</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  🎥   תמלול + סיכום הרצאות וראיונות</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">תמלול מקצועי + סיכום ברור של כל תוכן מוקלט -- הרצאות, ראיונות, Zoom, YouTube, Moodle, TED.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 6px; font-size: 0.9em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.8em; line-height: 1.2; text-align: right;">
-<p style="margin: 2px 0;"> 🎧  תמלול מדויק של קבצי וידאו או אודיו</p>
-<p style="margin: 1px 0;"> 📝  סיכום מובנה לפי נושאים ומושגים</p>
-<p style="margin: 1px 0;"> 🗂️  חלוקה בין דוברים בראיונות</p>
-<p style="margin: 1px 0;"> 📄  קובץ Word/PDF + קובץ סיכום ללמידה</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.8em;"> ⏱️  אפשרות לדחיפות -- תוך 48 שעות</p>
+<p style="margin: 2px 0;">  🎧   תמלול מדויק של קבצי וידאו או אודיו</p>
+<p style="margin: 1px 0;">  📝   סיכום מובנה לפי נושאים ומושגים</p>
+<p style="margin: 1px 0;">  🗂️   חלוקה בין דוברים בראיונות</p>
+<p style="margin: 1px 0;">  📄   קובץ Word/PDF + קובץ סיכום ללמידה</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 6px; font-size: 0.8em;">  ⏱️   אפשרות לדחיפות -- תוך 48 שעות</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון תמלול</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון תמלול</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">מחירים לפי אורך ההקלטה ומורכבות</p>
 <div class="back-content">
-<div class="price-item"> 🎧  עד 30 דק': תמלול 150₪ | סיכום 150₪</div>
-<div class="price-item"> 📝  עד 30 דק': תמלול + סיכום 200₪  🔥 </div>
-<div class="price-item"> 📊  עד 60 דק': תמלול + סיכום 300₪</div>
-<div class="price-item"> ⚡  דחיפות (48 שעות) - תוספת 25%</div>
+<div class="price-item">🎧 עד 30 דק': תמלול — 250 ₪ | סיכום — 250 ₪</div>
+<div class="price-item">📝 עד 30 דק': תמלול + סיכום — 400 ₪</div>
+<div class="price-item">📊 עד 60 דק': תמלול + סיכום — 800 ₪</div>
+<div class="price-item">⚡ דחיפות (48 שעות) — תוספת 25%</div>
 </div>
 </div>
 </div>
@@ -2053,29 +2085,29 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-user-tie"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 🧑‍💼  קורות חיים מותאמים לפרקטיקום או תחילת קריירה</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  🧑 ‍ 💼   קורות חיים מותאמים לפרקטיקום או תחילת קריירה</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">סיימתם תואר? יוצאים לפרקטיקום? הגיע הזמן להציג את עצמכם כמו שצריך.</p>
 <p style="font-size: 0.8em; margin-bottom: 8px;">נכין עבורכם קורות חיים מקצועיים ומרשימים, בעברית או באנגלית, מותאמים אישית למסלול הלימודים, לתחום העיסוק ולשלב שבו אתם נמצאים.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">מה כולל השירות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;"> ✅  כתיבה מקצועית של קורות חיים – מאפס או שדרוג למסמך קיים</p>
-<p style="margin: 1px 0;"> ✅  התאמה לפרקטיקום, התמחות או משרה ראשונה בתחום הלימודים</p>
-<p style="margin: 1px 0;"> ✅  שילוב נכון של ניסיון לימודי, כישורים רלוונטיים ויתרונות אישיים</p>
-<p style="margin: 1px 0;"> ✅  עיצוב נקי ויזואלית – כולל גרסה עם תמונה לבחירה</p>
-<p style="margin: 1px 0;"> ✅  אפשרות לגרסה באנגלית או בעברית</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  קובץ מוכן לשליחה בלחיצת כפתור</p>
+<p style="margin: 1px 0;">  ✅   כתיבה מקצועית של קורות חיים – מאפס או שדרוג למסמך קיים</p>
+<p style="margin: 1px 0;">  ✅   התאמה לפרקטיקום, התמחות או משרה ראשונה בתחום הלימודים</p>
+<p style="margin: 1px 0;">  ✅   שילוב נכון של ניסיון לימודי, כישורים רלוונטיים ויתרונות אישיים</p>
+<p style="margin: 1px 0;">  ✅   עיצוב נקי ויזואלית – כולל גרסה עם תמונה לבחירה</p>
+<p style="margin: 1px 0;">  ✅   אפשרות לגרסה באנגלית או בעברית</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">  🎯   קובץ מוכן לשליחה בלחיצת כפתור</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחיר:</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחיר:</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות והיקף הפרויקט</p>
 <div class="back-content">
-<div class="price-item"> 🇮🇱  עברית בלבד: 350 ₪</div>
-<div class="price-item"> 🇺🇸  אנגלית בלבד: 450 ₪</div>
-<div class="price-item"> 🌐  דו לשוני: 600 ₪</div>
-<div class="price-item"> 🔄  שדרוג קיים: 200 ₪</div>
+<div class="price-item">🇮🇱 עברית בלבד — 400 ₪</div>
+<div class="price-item">🇺🇸 אנגלית בלבד — 500 ₪</div>
+<div class="price-item">🌐 דו לשוני — 700 ₪</div>
+<div class="price-item">🔄 שדרוג קיים — 300 ₪</div>
 </div>
 </div>
 </div>
@@ -2084,27 +2116,26 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-user-graduate"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 💻  סיוע במבחנים אונליין</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  💻   סיוע במבחנים אונליין</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">הכנה וליווי למבחנים מקוונים בזמן אמת</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;"> ✅  מותאם אישית לפי תחום וסוג הבחינה</p>
-<p style="margin: 1px 0;"> ✅  זמינות מלאה בזמן אמת -- על פי תיאום</p>
-<p style="margin: 1px 0;"> ✅  כולל הדגמות, פתרון תרגילים וסימולציות</p>
-<p style="margin: 1px 0;"> ✅  מתבצע באופן דיסקרטי ומקצועי</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  ליווי במערכות Zoom, Moodle ופורטלים</p>
+<p style="margin: 1px 0;">  ✅   מותאם אישית לפי תחום וסוג הבחינה</p>
+<p style="margin: 1px 0;">  ✅   זמינות מלאה בזמן אמת -- על פי תיאום</p>
+<p style="margin: 1px 0;">  ✅   כולל הדגמות, פתרון תרגילים וסימולציות</p>
+<p style="margin: 1px 0;">  ✅   מתבצע באופן דיסקרטי ומקצועי</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">  🎯   ליווי במערכות Zoom, Moodle ופורטלים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון סיוע מבחנים</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון סיוע מבחנים</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי מורכבות המבחן וזמן ההיערכות</p>
 <div class="back-content">
-<div class="price-item"> 💻  הכנה למבחן מקוון - 300₪</div>
-<div class="price-item"> 🎯  ליווי בזמן אמת (60 דק') - 400₪</div>
-<div class="price-item"> 📚  הכנה + ליווי (חבילה) - 600₪</div>
-<div class="price-item"> ⚡  סימולציה מוקדמת - 200₪</div>
+<div class="price-item">💻 הכנה למבחן מקוון — 450 ₪</div>
+<div class="price-item">🎯 ליווי בזמן אמת (60 דק') — 600 ₪</div>
+<div class="price-item">📚 הכנה + ליווי (חבילה) — 850 ₪</div>
 </div>
 </div>
 </div>
@@ -2113,28 +2144,27 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-search"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 🔍  חיפוש וניתוח מידע אקדמי</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  🔍   חיפוש וניתוח מידע אקדמי</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">איתור, סינון וניתוח של מקורות רלוונטיים -- מאמרים, ספרים, פסקי דין וחומרים עיוניים -- לצורך כתיבת סקירת ספרות או בניית מסד ידע איכותי.</p>
 <p style="margin-top: 8px; font-weight: 600; font-size: 0.85em;">השירות מותאם במיוחד לעבודות סמינריוניות, תזות, פרויקטים ומטלות עיוניות.</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;"> ✅  איתור מקורות אקדמיים איכותיים ומעודכנים</p>
-<p style="margin: 1px 0;"> ✅  סינון וארגון המידע לפי נושאים או שאלות מחקר</p>
-<p style="margin: 1px 0;"> ✅  כתיבה מקצועית של סקירת ספרות</p>
-<p style="margin: 1px 0;"> ✅  הכנת ביבליוגרפיה לפי כללי APA או דרישת המרצה</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  גישה למאגרי מידע אקדמיים</p>
+<p style="margin: 1px 0;">  ✅   איתור מקורות אקדמיים איכותיים ומעודכנים</p>
+<p style="margin: 1px 0;">  ✅   סינון וארגון המידע לפי נושאים או שאלות מחקר</p>
+<p style="margin: 1px 0;">  ✅   כתיבה מקצועית של סקירת ספרות</p>
+<p style="margin: 1px 0;">  ✅   הכנת ביבליוגרפיה לפי כללי APA או דרישת המרצה</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">  🎯   גישה למאגרי מידע אקדמיים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי היקף המחקר ומורכבותו</p>
 <div class="back-content">
-<div class="price-item">איתור מקורות (עד 10) - 70₪</div>
-<div class="price-item">כתיבת סקירת ספרות (עד 5 עמודים) - 600₪</div>
-<div class="price-item">תוספת מיון לפי ניתוח תוכן - +50₪</div>
-<div class="price-item">ביבליוגרפיה מעוצבת בלבד - 100₪</div>
+<div class="price-item">🔎 איתור מקורות (עד 10) — 100 ₪</div>
+<div class="price-item">📑 כתיבת סקירת ספרות (עד 10 עמ') — 1,600 ₪</div>
+<div class="price-item">📚 ביבליוגרפיה מעוצבת לפי APA (גרסה אחרונה) — 100 ₪ לעמוד</div>
 </div>
 </div>
 </div>
@@ -2143,28 +2173,28 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-headphones"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 🎧  יצירת פודקאסטים לימודיים בהתאמה אישית</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  🎧   יצירת פודקאסטים לימודיים בהתאמה אישית</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">המר את הסיכומים, המצגות או עיקרי ההרצאה שלך לקובץ שמע ברור ונעים -- כדי שתוכל ללמוד בדרך, באוזניות, בכל זמן ובכל מקום.</p>
-<p style="margin-top: 8px; color: var(--neon-green); font-size: 0.8em; line-height: 1.2;">פתרון מושלם למי שמעדיף להקשיב במקום לקרוא  📱🎧 </p>
+<p style="margin-top: 8px; color: var(--neon-green); font-size: 0.8em; line-height: 1.2;">פתרון מושלם למי שמעדיף להקשיב במקום לקרוא   📱🎧  </p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;"> ✅  הפקה של קובץ שמע (MP3) באיכות גבוהה</p>
-<p style="margin: 1px 0;"> ✅  קריינות אנושית ברורה ומקצועית</p>
-<p style="margin: 1px 0;"> ✅  תיאום סגנון לפי מטרה -- חזרה או הצגה</p>
-<p style="margin: 1px 0;"> ✅  מתאים לסיכומים, הרצאות ומצגות</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  מושלם ללמידה תוך כדי תנועה: בנסיעה או בהליכה</p>
+<p style="margin: 1px 0;">  ✅   הפקה של קובץ שמע (MP3) באיכות גבוהה</p>
+<p style="margin: 1px 0;">  ✅   קריינות אנושית ברורה ומקצועית</p>
+<p style="margin: 1px 0;">  ✅   תיאום סגנון לפי מטרה -- חזרה או הצגה</p>
+<p style="margin: 1px 0;">  ✅   מתאים לסיכומים, הרצאות ומצגות</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">  🎯   מושלם ללמידה תוך כדי תנועה: בנסיעה או בהליכה</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון פודקאסטים</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון פודקאסטים</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים עשויים להשתנות לפי אורך התוכן ומורכבות הקריינות</p>
 <div class="back-content">
-<div class="price-item"> 🎧  קובץ שמע קצר (עד 10 דק') - 180₪</div>
-<div class="price-item"> 📱  קובץ שמע בינוני (עד 30 דק') - 350₪</div>
-<div class="price-item"> 🎧  קובץ שמע ארוך (עד 60 דק') - 500₪</div>
-<div class="price-item"> 🎯  פיצול לפרקים + הדגשות - 250₪</div>
+<div class="price-item">  🎧   קובץ שמע קצר (עד 10 דק') - 180₪</div>
+<div class="price-item">  📱   קובץ שמע בינוני (עד 30 דק') - 350₪</div>
+<div class="price-item">  🎧   קובץ שמע ארוך (עד 60 דק') - 500₪</div>
+<div class="price-item">  🎯   פיצול לפרקים + הדגשות - 250₪</div>
 </div>
 </div>
 </div>
@@ -2173,27 +2203,27 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <div class="service-icon">
 <i class="fas fa-language"></i>
 </div>
-<h3 style="font-size: 1em; margin-bottom: 8px;"> 🌐  תרגום מקצועי ומותאם לעולם האקדמיה</h3>
+<h3 style="font-size: 1em; margin-bottom: 8px;">  🌐   תרגום מקצועי ומותאם לעולם האקדמיה</h3>
 <p style="font-size: 0.8em; margin-bottom: 8px;">תרגום עבודות אקדמיות, מאמרים ומקורות מאנגלית לעברית ולהפך -- בהבנה מלאה של המונחים האקדמיים והתחום</p>
 <div style="margin-top: 8px;">
 <p style="font-weight: 700; color: var(--neon-green); margin-bottom: 4px; font-size: 0.8em;">סוגי עבודות נתמכות:</p>
 <div style="font-size: 0.7em; line-height: 1.1; text-align: right;">
-<p style="margin: 1px 0;"> ✅  תרגום עבודות סמינריוניות ותזות</p>
-<p style="margin: 1px 0;"> ✅  תרגום מאמרים מחקריים ומקורות</p>
-<p style="margin: 1px 0;"> ✅  תרגום תקצירים ומבואות</p>
-<p style="margin: 1px 0;"> ✅  התאמה לטרמינולוגיה האקדמית</p>
-<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;"> 🎯  מתמחים בתחומי מדעי הרוח, החברה והמשפטים</p>
+<p style="margin: 1px 0;">  ✅   תרגום עבודות סמינריוניות ותזות</p>
+<p style="margin: 1px 0;">  ✅   תרגום מאמרים מחקריים ומקורות</p>
+<p style="margin: 1px 0;">  ✅   תרגום תקצירים ומבואות</p>
+<p style="margin: 1px 0;">  ✅   התאמה לטרמינולוגיה האקדמית</p>
+<p style="color: var(--neon-green); font-weight: 600; text-align: center; margin-top: 4px; font-size: 0.75em;">  🎯   מתמחים בתחומי מדעי הרוח, החברה והמשפטים</p>
 </div>
 </div>
 </div>
 <div class="service-back">
-<h3 style="color: var(--neon-blue); margin-bottom: 10px;"> 💰  מחירון תרגום</h3>
+<h3 style="color: var(--neon-blue); margin-bottom: 10px;">  💰   מחירון תרגום</h3>
 <p style="font-size: 0.7em; opacity: 0.8; color: #ffcc99; text-align: center; margin-bottom: 25px; line-height: 1.3;">המחירים לפי מספר מילים ומורכבות הטקסט</p>
 <div class="back-content">
-<div class="price-item"> 📝  תרגום רגיל - 0.8₪ למילה</div>
-<div class="price-item"> 🎓  תרגום אקדמי מתקדם - 1.2₪ למילה</div>
-<div class="price-item"> 📚  תרגום מחקרי מורכב - 1.5₪ למילה</div>
-<div class="price-item"> ⚡  דחיפות (24 שעות) - תוספת 50%</div>
+<div class="price-item">  📝   תרגום רגיל - 0.8₪ למילה</div>
+<div class="price-item">  🎓   תרגום אקדמי מתקדם - 1.2₪ למילה</div>
+<div class="price-item">  📚   תרגום מחקרי מורכב - 1.5₪ למילה</div>
+<div class="price-item">  ⚡   דחיפות (24 שעות) - תוספת 50%</div>
 </div>
 </div>
 </div>
@@ -2206,11 +2236,11 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <i class="fas fa-clock"></i>
 חשוב: ככל שתחכו יותר, הלחץ יגדל
 </div>
-<h2>בואו נפסיק את המעגל הזה היום</h2>
+<h2>מפסיקים לדחות, מתחילים להתקדם</h2>
 <p style="font-size: 1.3em; margin-bottom: 30px; line-height: 1.6;">
 אתם לא צריכים להתמודד עם זה לבד.
 <span style="color: var(--neon-green); font-weight: 700;">אנחנו כאן לעזור לכם להצליח</span>
-בלי הלחץ, בלי החרדה ובלי הכאב הנפשי.
+עוברים מתסכול לשקט נפשי עם ליווי מקצועי עד ההגשה.
 </p>
 <div class="cta-buttons">
 <a class="btn btn-primary" href="https://wa.me/972532829226?text=שלום! אני מעוניין/ת בעזרה אקדמית" target="_blank">
@@ -2220,6 +2250,10 @@ setTimeout(() => document.body.removeChild(successMsg), 3000);
 <a class="btn btn-secondary" href="tel:0532829226">
 <i class="fas fa-phone"></i>
 התקשרו עכשיו - 053-282-9226
+</a>
+<a class="btn btn-facebook" href="https://www.facebook.com/profile.php?id=61579283513081" target="_blank" rel="noopener">
+<i class="fab fa-facebook-f"></i>
+Facebook – בקרו בעמוד
 </a>
 </div>
 </div>
